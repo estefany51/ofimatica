@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SILUMACION DE INSCRIPCIÓN</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <canvas id="node-background"></canvas>
+   <aside class="sidebar" id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <nav class="menu">
+      <a href="index.html"><i class="fas fa-home"></i><span class="text">Inicio</span></a>
+      <a href="malla.html"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
+      <a href="area.html"><i class="fas fa-layer-group"></i><span class="text">Áreas</span></a>
+      <a href="perfil.html"><i class="fas fa-user-graduate"></i><span class="text">Perfil</span></a>
+      <a href="modalidad.html"><i class="fas fa-sign-in-alt"></i><span class="text">Modalidad</span></a>
+      <a href="proyecto.html"><i class="fas fa-briefcase"></i><span class="text">Proyectos</span></a>
+      <a href="contacto.html"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
+    </nav>
+  </aside>
+  
+  <div class="main-contents">
+
+<!--vista requisitos-->
+<div id="vista-requisitos" class="vista-activa">
+<h3 class="titulo-requisitos">SELECCIONA LAS MATERIAS CURSADAS</h3>
+   <form id="form-materias-tomadas" class="form-materias-tomadas">
+    <div class="semestres-grid">
+  <div class="semestre">
+      <h4>Sem-1</h4>
+<label class="materias"><input type="checkbox" name="materia" value="EMP210">	 EMP210<br>Realidad<br>Nacional    	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR111">	 HAR111<br>Electrónica<br>General  	</label>
+<label class="materias"><input type="checkbox" name="materia" value="LEN311">	 LEN311<br>Inglés I             	</label>
+<label class="materias"><input type="checkbox" name="materia" value="LEN312">	 LEN312<br>Lenguaje I           	</label>
+<label class="materias"><input type="checkbox" name="materia" value="MAT310">	 MAT310<br>Matemática<br>Básica    	</label>
+</div>
+<div class="semestre">
+      <h4>Sem-2</h4>
+<label class="materias"><input type="checkbox" name="materia" value="LEN323">	 LEN323<br>Inglés II              	</label>
+<label class="materias"><input type="checkbox" name="materia" value="LEN324">	 LEN324<br>Lenguaje II            	</label>
+<label class="materias"><input type="checkbox" name="materia" value="MAT311">	 MAT311<br>Cálculo I              	</label>
+<label class="materias"><input type="checkbox" name="materia" value="OFI111">	 OFI111<br>Introducción<br>a la Informática</label>
+<label class="materias"><input type="checkbox" name="materia" value="OFI122">	 OFI122<br>Productos<br>de Oficina I 	</label>
+<label class="materias"><input type="checkbox" name="materia" value="OFI123">	 OFI123<br>Práctica<br>Profesional I 	</label>
+ </div>
+<div class="semestre">
+      <h4>Sem-3</h4>
+<label class="materias"><input type="checkbox" name="materia" value="EMP221">	EMP221<br>Organización<br>de Oficina	</label>
+<label class="materias"><input type="checkbox" name="materia" value="INF121">	INF121<br>Programación	</label>
+<label class="materias"><input type="checkbox" name="materia" value="INF132">	INF132<br>Gráfico por<br>computadora I	</label>
+<label class="materias"><input type="checkbox" name="materia" value="LEN335">	LEN335<br>Inglés<br>Conversacional	</label>
+<label class="materias"><input type="checkbox" name="materia" value="MAT312">	MAT312<br>Álgebra	</label>
+<label class="materias"><input type="checkbox" name="materia" value="MAT323">	MAT323<br>Cálculo II	</label>
+<label class="materias"><input type="checkbox" name="materia" value="OFI134">	OFI134<br>Productos<br>de Oficina II	</label>
+ </div>
+<div class="semestre">
+      <h4>Sem-4</h4>
+<label class="materias"><input type="checkbox" name="materia" value="EMP234">	EMP234<br>Administración	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR142">	HAR142<br>Teleinformática I	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR143">	HAR143<br>Sistema<br>Operativo I	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR155">	HAR155<br>Soporte<br>Técnico I	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR156">	HAR156<br>Redes de<br>Computadoras I	</label>
+<label class="materias"><input type="checkbox" name="materia" value="INF144">	INF144<br>Práctica<br>Profesional II	</label>
+ </div>
+<div class="semestre">
+      <h4>Sem-5</h4>
+<label class="materias"><input type="checkbox" name="materia" value="EMP233">	EMP233<br>Contabilidad<br>General	</label>
+<label class="materias"><input type="checkbox" name="materia" value="EMP257">	EMP257<br>Paquetes<br>Contables	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR154">	HAR154<br>Teleinformática II	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR156">	HAR156<br>Sistema<br>Operativo II	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR157">	HAR157<br>Soporte<br>Técnico II	</label>
+<label class="materias"><input type="checkbox" name="materia" value="INF143">	INF143<br>Base de<br>Datos I	</label>
+ </div>
+<div class="semestre">
+      <h4>Sem-6</h4>  
+<label class="materias"><input type="checkbox" name="materia" value="EMP245">	EMP245<br>Auditoria	</label>
+<label class="materias"><input type="checkbox" name="materia" value="INF166">	INF166<br>Base de<br>Datos II	</label>
+<label class="materias"><input type="checkbox" name="materia" value="MAT354">	MAT354<br>Estadísticas	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF141">	SOF141<br>Sistemas de<br>Información	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF164">	SOF164<br>Temas<br>Especiales I	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF166">	SOF166<br>Práctica<br>Profesional III	</label>
+ </div>
+<div class="semestre">
+      <h4>Sem-7</h4>
+<label class="materias"><input type="checkbox" name="materia" value="EMP266">	EMP266<br>Derecho<br>Informático	</label>
+<label class="materias"><input type="checkbox" name="materia" value="EMP278">	EMP278<br>Gestión de<br>Recursos Humanos	</label>
+<label class="materias"><input type="checkbox" name="materia" value="EMP279">	EMP279<br>Gestión de<br>Riesgos	</label>
+<label class="materias"><input type="checkbox" name="materia" value="HAR178">	HAR178<br>Seguridad<br>Informática	</label>
+<label class="materias"><input type="checkbox" name="materia" value="MAT375">	MAT375<br>Investigación<br>Operativa	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF163">	SOF163<br>Administración<br>Informática	</label>
+ </div>
+<div class="semestre">
+      <h4>Sem-8</h4>
+<label class="materias"><input type="checkbox" name="materia" value="INF187">	INF187<br>Gestión de<br>Sitios Web	</label>
+<label class="materias"><input type="checkbox" name="materia" value="OFI186">	OFI186<br>Gestión de<br>Proyectos	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF152">	SOF152<br>Tecnología del<br>Tratamiento	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF187">	SOF187<br>Análisis de<br>Datos	</label>
+<label class="materias"><input type="checkbox" name="materia" value="SOF188">	SOF188<br>Temas<br>especiales II	</label>
+</div>
+  </form>
+</div>
+<div class="acciones-formulario">
+      <button type="button" onclick="verificarRequisitos()">Ver materias habilitadas</button>
+</div>
+
+ <h3>Materias habilitadas para inscripción:</h3>
+  <ul id="resultado-requisitos" class="resultado-grid"></ul>
+
+
+<div id="contenedor-grupos" class="tarjeta-grupo">
+  <ul id="resultado-subgrupos"></ul>
+</div>
+<div id="tabla-horarios" class="tarjeta-grupo"></div>
+<script src="grupos.js"></script>
+<script>
+  // Llama la función para cargar al cargar la página
+  window.onload = function() {
+    cargarGrupos();
+  };
+</script>
+
+</div>
+<div id="tabla-horario-container"></div>
+   <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+    </script>
+      <script src="nodes.js"></script>
+<script src="requisitos.js"></script>
+
+
+</body>
+</html>

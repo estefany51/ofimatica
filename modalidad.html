@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modalidades</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body>
+  <canvas id="node-background"></canvas>
+
+  <aside class="sidebar" id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <nav class="menu">
+      <a href="index.html"><i class="fas fa-home"></i><span class="text">Inicio</span></a>
+      <a href="malla.html"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
+      <a href="area.html"><i class="fas fa-layer-group"></i><span class="text">Áreas</span></a>
+      <a href="perfil.html"><i class="fas fa-user-graduate"></i><span class="text">Perfil</span></a>
+      <a href="modalidad.html"><i class="fas fa-sign-in-alt"></i><span class="text">Modalidad</span></a>
+      <a href="proyecto.html"><i class="fas fa-briefcase"></i><span class="text">Proyectos</span></a>
+      <a href="contacto.html"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
+    </nav>
+  </aside>
+
+  <div class="main-contentos">
+    <div class="tabes">
+      <div class="tabe active" onclick="showtabe('ingreso')">Modalidad de Ingreso</div>
+      <div class="tabe" onclick="showtabe('egreso')">Modalidad de Egreso</div>
+    </div>
+
+    <!-- Modalidad Ingreso -->
+    <div id="ingreso" class="tabe-content active">
+      <div class="pyramid">
+        <div class="card top">
+          <h3>Ingreso Directo</h3>
+          <p>Para bachilleres destacados que cumplen los requisitos académicos.</p>
+        </div>
+        <div class="middle-row">
+          <div class="card left">
+                      <h3>CUP (Curso Preuniversitario)</h3>
+      <p>Curso de 192 horas de preparación de bachilleres para el ingreso a la carrera, constituida por la aplocación de hasta 2 pruebas parciales y culminará con una evaluación final.</p>
+      <h4>Requisitos:</h4>
+      <ul class="cup-details">
+        <li>Formulario de pre inscripción</li>
+        <li>Boleta de pago valorado</li>
+        <li>Fotocopia de Cédula de Identidad</li>
+        <li>Fotocopia del título de bachiller o última libreta de colegio</li>
+      </ul>
+        <h4>Costos:</h4>
+      <ul class="cup-details">
+        <li>Bs. 700 Bachilleres Fiscal, Convenio, Particular, Extranjeros</li>
+        </ul>
+        <h4>Banco de Preguntas:</h4>
+      <ul class="cup-details">
+        <li>Matemáticas, Química, Física, Lenguaje</li>
+        </ul>
+          </div>
+          <div class="card right">
+            <h3>PSA (Prueba de Suficiencia Académica)</h3>
+      <p>Permite ingresar demostrando competencias académicas mediante una evaluación.</p>
+      <h4>Requisitos Postulantes Nuevos:</h4>
+      <ul class="cup-details">
+        <li>Formulario de pre inscripción</li>
+        <li>Boleta de pago valorado</li>
+        <li>Fotocopia de Cédula de Identidad</li>
+        <li>Fotocopia del título de bachiller o última libreta de colegio</li>
+      </ul>
+      <h4>Requisitos Postulantes Antiguos:</h4>
+      <ul class="cup-details">
+        <li>Formulario de pre inscripción</li>
+        <li>Boleta de pago valorado</li>
+        <li>Confirmación en el sistema</li>
+        </ul>
+        <h4>Costos:</h4>
+      <ul class="cup-details">
+        <li>Bs. 300 Bachilleres col. Fiscal, Convenio.</li>
+        <li>Bs. 500 Bachilleres col. Particular</li>
+        <li>Bs. 600 Bachilleres Extranjeros</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modalidad Egreso -->
+     
+    <div id="egreso" class="tabe-content">
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn">Graduación por Excelencia Académica</button>
+          <div class="accordion-content">
+           <p>Esta modalidad permite optar al título profesional sin la necesidad de realizar un trabajo final de grado. Para acceder a ella, el estudiante debe cumplir con los siguientes requisitos:</p>
+<ul>
+  <li>Haber aprobado todas las materias del plan de estudios, excepto la correspondiente a la modalidad de graduación.</li>
+  <li>Haber concluido dichas materias dentro del tiempo máximo establecido por la carrera.</li>
+  <li>No haber reprobado ninguna asignatura a lo largo de toda la carrera.</li>
+  <li>Contar con un promedio general igual o superior a la media aritmética móvil, calculada por carrera y por gestión.</li>
+</ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">Graduación por Buen Rendimiento Académico</button>
+          <div class="accordion-content">
+            <p>Esta modalidad permite obtener el título profesional sin la realización de un trabajo final de grado, siempre que se cumplan los siguientes requisitos:</p>
+<ul>
+  <li>Haber aprobado todas las materias del plan de estudios, excepto la correspondiente a la modalidad de graduación.</li>
+  <li>Haber completado dichas materias en un plazo no mayor al tiempo establecido por la carrera, más un 60% adicional de ese tiempo.</li>
+  <li>Se permite haber reprobado una sola vez una misma asignatura durante toda la carrera.</li>
+  <li>Contar con un promedio general igual o superior a la media aritmética móvil utilizada para la Graduación por Excelencia en la misma gestión.</li>
+</ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">Graduación por Buen Desempeño Académico</button>
+          <div class="accordion-content">
+            <p>Es una modalidad de titulación directa que puede ser aplicada sin tomar en cuenta el tiempo de permanencia del estudiante en la carrera, siempre que se cumplan los siguientes requisitos:</p>
+<ul>
+  <li>Haber aprobado todas las materias del plan de estudios, excepto la correspondiente a la modalidad de graduación.</li>
+  <li>Haber reprobado una sola vez una misma asignatura durante toda la carrera.</li>
+  <li>Tener un promedio general igual o superior al establecido por la facultad, conforme a resolución emitida por el Consejo Directivo.</li>
+</ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+  <button class="accordion-btn">Seminario de Grado</button>
+  <div class="accordion-content">
+    <p>Para optar por esta modalidad de graduación, el estudiante deberá aprobar cinco módulos temáticos, cada uno con una duración de <strong>60 horas</strong> y un costo individual de <strong>Bs. 1.000</strong>.</p>
+
+    <p><strong>Contenido de los módulos:</strong></p>
+    <ul>
+      <li><strong>Módulo I:</strong> CCNA 1 – Introducción a las Redes (ITN)</li>
+      <li><strong>Módulo II:</strong> CCNA 2 – Switching, Routing and Wireless Essentials (SRWE)</li>
+      <li><strong>Módulo III:</strong> CCNA 3 – Enterprise Networking, Security and Automation (ENSA)</li>
+      <li><strong>Módulo IV:</strong> Ciberseguridad y Programación en Python</li>
+      <li><strong>Módulo V:</strong> Programación en Python</li>
+    </ul>
+
+    <p>Una vez aprobados los módulos, el estudiante deberá:</p>
+    <ul>
+      <li>Elaborar y presentar un <strong>proyecto final</strong> en al menos una de las áreas abordadas en el seminario.</li>
+      <li><strong>Defender</strong> dicho proyecto ante un tribunal evaluador.</li>
+    </ul>
+
+    <p><strong>La calificación final se compone de:</strong></p>
+    <ul>
+      <li><strong>70%</strong> correspondiente a la defensa del proyecto final ante tribunal.</li>
+      <li><strong>30%</strong> calculado como el promedio de las notas obtenidas en los cinco módulos del seminario.</li>
+    </ul>
+  </div>
+</div>
+
+        <div class="accordion-item">
+  <button class="accordion-btn">Tesis de Grado</button>
+  <div class="accordion-content">
+    <p>
+      La <strong>Tesis de Grado</strong> es un trabajo de investigación teórica o práctica que el estudiante debe desarrollar siguiendo los principios de la metodología científica. Su propósito es <strong>analizar y proponer soluciones</strong> a un problema específico identificado en su área de estudio.
+    </p>
+    <p>
+      Esta modalidad requiere que el estudiante aplique conocimientos adquiridos durante la carrera, desarrolle habilidades de análisis y redacción académica, y defienda su propuesta ante un tribunal evaluador.
+    </p>
+  </div>
+</div>
+<div class="accordion-item">
+  <button class="accordion-btn">Proyecto de Grado</button>
+  <div class="accordion-content">
+    <p>
+      El <strong>Proyecto de Grado</strong> es un trabajo de investigación aplicada cuyo objetivo principal es diseñar y desarrollar una solución práctica que tenga un impacto social o profesional. Puede consistir en la creación de sistemas, programas, productos, servicios o cualquier otro objeto de uso social.
+    </p>
+    <p>
+      La finalidad del proyecto es que el estudiante demuestre su capacidad para aplicar los conocimientos y metodologías aprendidas durante su carrera, abordando un problema real o una necesidad específica dentro de su campo profesional.
+    </p>
+    <p>
+      Para realizar el Proyecto de Grado, el estudiante debe seguir las normas que incluyen las siguientes etapas:
+    </p>
+    <ul>
+      <li><strong>Diseño:</strong> Planificar el proyecto definiendo los objetivos, alcance, recursos y metodología a emplear.</li>
+      <li><strong>Gestión:</strong> Organizar y ejecutar las actividades necesarias para llevar a cabo el proyecto, gestionando tiempo, recursos y posibles dificultades.</li>
+      <li><strong>Evaluación:</strong> Analizar y validar los resultados obtenidos para verificar que se cumplen los objetivos planteados y el impacto esperado.</li>
+    </ul>
+    <p>
+      El proyecto debe estar sustentado en una investigación rigurosa y una correcta documentación, para asegurar la calidad y validez del trabajo realizado.
+    </p>
+    <a href="proyecto_de_grado.pdf" download="proyecto_de_grado.pdf" class="download-link">Formato Proyecto de Grado</a>
+
+  </div>
+</div>
+<div class="accordion-item">
+  <button class="accordion-btn">Trabajo Dirigido</button>
+  <div class="accordion-content">
+    <p>El Trabajo Dirigido es una práctica profesional que permite aplicar los conocimientos adquiridos para contribuir a la solución de problemas reales o aprovechar oportunidades en instituciones. Su objetivo es desarrollar habilidades prácticas y experiencia en un entorno laboral supervisado.</p>
+    <h4>Antes del Trabajo Dirigido:</h4>
+    <ul>
+      <li>Seleccionar la institución o empresa donde realizará la práctica profesional.</li>
+      <li>Definir el problema o área de trabajo en coordinación con el tutor académico y el supervisor de la institución.</li>
+      <li>Presentar y aprobar el plan de trabajo que detalle objetivos, actividades, tiempos y recursos necesarios.</li>
+      <li>Firmar convenios o acuerdos entre la institución y la universidad, si aplica.</li>
+    </ul>
+
+    <h4>Durante el Trabajo Dirigido:</h4>
+    <ul>
+      <li>Desarrollar las actividades propuestas según el plan de trabajo.</li>
+      <li>Registrar y documentar las actividades realizadas y los resultados obtenidos.</li>
+      <li>Mantener comunicación constante con el tutor académico y el supervisor para recibir asesoría y seguimiento.</li>
+      <li>Identificar y analizar problemas o oportunidades dentro del ámbito del trabajo.</li>
+      <li>Aplicar conocimientos teóricos y prácticos para dar soluciones o propuestas concretas.</li>
+    </ul>
+
+    <h4>Trabajo Dirigido:</h4>
+    <ul>
+      <li>Elaborar un informe final que recoja las actividades, resultados, conclusiones y recomendaciones.</li>
+      <li>Presentar y defender el informe ante un tribunal o comité académico, si se requiere.</li>
+      <li>Evaluar la experiencia profesional y académica para identificar aprendizajes y áreas de mejora.</li>
+      <li>Realizar los ajustes o mejoras solicitadas tras la presentación o defensa, si es necesario.</li>
+      <li>Completar los trámites administrativos para la aprobación formal del Trabajo Dirigido.</li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showtabe(tabeId) {
+      document.querySelectorAll('.tabe').forEach(tabe => tabe.classList.remove('active'));
+      document.querySelectorAll('.tabe-content').forEach(content => content.classList.remove('active'));
+      document.querySelector(`.tabe[onclick*="${tabeId}"]`).classList.add('active');
+      document.getElementById(tabeId).classList.add('active');
+    }
+
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+
+    // Acordeón
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.accordion-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('active');
+          const content = button.nextElementSibling;
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    });
+  </script>
+    <script src="nodes.js"></script>
+</body>
+</html>

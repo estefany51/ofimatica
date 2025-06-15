@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Proyectos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .info-section { margin: 20px; padding: 20px; background: #f8f9fa; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .info-section h2 { color: #003366; }
+    .info-section ul { list-style-type: none; padding-left: 0; }
+    .info-section li { padding: 8px 0; }
+    .benefit { background: #e6f2ff; margin: 10px 0; padding: 10px; border-radius: 8px; }
+
+    /* Estilo para ocultar pestañas */
+    .tabi-content { display: none; }
+    .tabi-content.active { display: block; }
+
+    .tabi-btn.active {
+      background-color: #003366;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="node-background"></canvas>
+  <aside class="sidebar" id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <nav class="menu">
+      <a href="index.html"><i class="fas fa-home"></i><span class="text">Inicio</span></a>
+      <a href="malla.html"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
+      <a href="area.html"><i class="fas fa-layer-group"></i><span class="text">Áreas</span></a>
+      <a href="perfil.html"><i class="fas fa-user-graduate"></i><span class="text">Perfil</span></a>
+      <a href="modalidad.html"><i class="fas fa-sign-in-alt"></i><span class="text">Modalidad</span></a>
+      <a href="beneficios.html"><i class="fas fa-coins"></i><span class="text">Beneficios</span></a>
+      <a href="contacto.html"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
+    </nav>
+  </aside>
+
+  <div class="main-contentas">
+    <div class="tabis-container">
+      <div class="tabis-menu">
+        <button class="tabi-btn active" onclick="showtabi('tabi1')">Becas Comedor</button>
+        <button class="tabi-btn" onclick="showtabi('tabi2')">Becas Albergue</button>
+        <button class="tabi-btn" onclick="showtabi('tabi3')">Becas Estudio</button>
+        <button class="tabi-btn" onclick="showtabi('tabi4')">Becas Investigación</button>
+        <button class="tabi-btn" onclick="showtabi('tabi5')">Beca Excelencia</button>
+        <button class="tabi-btn" onclick="showtabi('tabi6')">Auxiliaturas</button>
+        <button class="tabi-btn" onclick="showtabi('tabi7')">Carrera Paralela</button>
+        <button class="tabi-btn" onclick="showtabi('tabi8')">Cambio de Carrera</button>
+        <button class="tabi-btn" onclick="showtabi('tabi9')">Caso especiales<br>Cierre de Kardex</button>
+      </div>
+      <div class="tabis-content">
+        <div id="tabi1" class="tabi-content active">
+          <div class="benefits-list">
+            <!-- Contenido específico para Becas -->
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>Beca Comedor</h3>
+              <p>El beneficio de la beca Comedor tiene por objetivo apoyar la formación profesional de los estudiantes de bajo ingresos económicos,
+                contribuyendo al beneficiario a cubrir su alimentación y nutrición diaria (En especie, subsidio alimentación)</p>
+              <ul>
+                <li>De Lunes a Viernes (Almuerzo y Cena)</li>
+                <li>Sábado (Almuerzo)</li>
+              </ul>
+                         </div>
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>Beca Alimentación</h3>
+              <p>El beneficio de la beca alimentación tiene por objetivo apoyar la formación profesional de los estudiantes de bajo ingresos económicos,
+                contribuyendo al beneficiario a cubrir su alimentación y nutrición diaria (monetario)</p>
+                          </div>
+            <div class="benefit-card" data-aos="fade-left">
+              <h2><strong>Requisitos:</strong></h2>
+              <ol>
+                <li>Los universitarios que postulen al servicio de comedor universitario, deberán tener el registro igual o mayor a:
+                  <ul>
+                    <li>Carreras a nivel Licenciatura registro 221......</li>
+                    <li>Carreras a nivel Técnico registro 223......</li>
+                  </ul>
+                  <br>y presentar los siguientes documentos para la evaluación socio-económica</li>
+                <li>Formulario de solicitud: D.U.B.S. (solicitar en las oficinas D.U.B.S.)</li>
+                <li>Fotocopia de Boleta de Inscripción</li>
+                <li>Fotocopia de Cédula de Identidad</li>
+                <li>De la tenencia de la vivienda</li>
+                <ul>
+                  <li>A) No propia: Recibo actual de alquiler y/o fotocopia del contrato anticrético.</li>
+                  <li>B) Propia; Presentar fotocopia del recibo del agua potable o de energía eléctrica.</li>
+                </ul>
+                <li>Carta del padre, apoderado y/o postulante, explicando grupo familiar, ocupación e ingresos monetarios, número de hijos y dependientes, situación familiar, ubicación, tenencia y tipo de vivienda y las razones por las que solicita el comedor (declaración jurada)</li>
+                <li>Debe ser presentado en un folder tamaño carta, con nepaco.
+                  <ul>
+                    <li>Nombre de la beca a la que postula</li>
+                    <li>Nombre y apellido completo del estudiante</li>
+                    <li>Registro universitario</li>
+                    <li>Nombre de la Carrera</li>
+                    <li>Nombre de la Facultad</li>
+                  </ul>
+                </li>
+              </ol>
+              <h3>Nota:</h3><p>La condición de registros varía de acuerdo a la gestión, revisar convocatoria oficial de la DUBS.<br>Recomendación: seguir su página de facebook para ver convocatorias, cambios o publicaciones de lista de aceptados<br><strong>De acuerdo al registro preguntar bien cuál de las 2 becas le corresponde tomar para evitar rechazos</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabi2" class="tabi-content">
+          <div class="benefits-list">
+            <!-- Contenido para Carrera Paralela -->
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>Beca Albergue</h3>
+              <p>
+<strong>Artículo 10°-</strong> La finalidad de la Beca Albergue Universitario es disminuir la deserción académica de estudiantes universitarios de otros departamentos, provincias y municipios, provenientes de sectores empobrecidos, indígenas originarios, campesinos a objeto de garantizar las condiciones mínimas necesarias para su avance académico.
+
+<br><strong>Artículo 11°-</strong> Brindando apoyo Económico, para tener un ambiente apto para el descanso y estudio del estudiante (damas y varones), con buen rendimiento académico y de escasos económicos, para que le sirva de ayuda en el avance y culminación de una carrera profesional, dentro de nuestra casa de estudios superiores.
+
+<br><strong>Artículo 12°-</strong> En las facultades que no cuenten con Infraestructura para albergue y las condiciones necesarias para su funcionamiento, se otorgara el beneficio en efectivo.
+
+<br><strong>Artículo 13°-</strong> En caso de otorgarse el beneficio en efectivo de <strong>Bs. 500</strong>, la asignación de la Beca Albergue Universitario será de la siguiente manera:
+
+<br>El total de las becas ofertadas se distribuirán de manera igualitaria entre las 18 Facultades de la U.A.G.R.M. tomando en cuenta un valor entero.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-left">
+  <h2>Requisitos para Postular a las Becas IDH</h2>
+  <p>Estos requisitos aplican a todas las becas financiadas con recursos del IDH, excepto la Beca a la Excelencia Académica.</p>
+
+  <ol>
+    <li>Ser de nacionalidad boliviana. Debes presentar una fotocopia de tu cédula de identidad vigente.</li>
+    <li>Ser estudiante regular de la U.A.G.R.M. La regularidad será verificada por el sistema según convocatoria.</li>
+    <li>No haber sido beneficiario de becas IDH por más de 5 años consecutivos (excepto en Beca Excelencia Académica, Auxiliares de cátedra o casos especiales del Art. 12 del Reglamento de Beca Comedor).</li>
+    <li><strong>Estudiantes antiguos:</strong> Haber aprobado al menos la mitad más uno de las materias inscritas en el último semestre.</li>
+    <li><strong>Estudiantes en modalidad de graduación:</strong> Pueden postular presentando su historial académico descargado del sistema.</li>
+    <li><strong>Estudiantes nuevos o de traspaso:</strong> Se evaluará únicamente su situación socioeconómica. Deben alcanzar al menos 35 puntos en la ficha socioeconómica.</li>
+    <li>No contar con otra beca o beneficio económico de la universidad, excepto: 
+      <ul>
+        <li>Auxiliares de Docencia</li>
+        <li>Beca Excelencia Académica</li>
+        <li>Casos especiales del Art. 12, inciso b) del Reglamento de Beca Comedor</li>
+      </ul>
+    </li>
+    <li>Completar el formulario de ficha socioeconómica desde tu perfil de estudiante.</li>
+  </ol>
+
+  <p><strong>Nota:</strong> Los ganadores de la experiencia pueden quedar exentos de estos requisitos si presentan una solicitud escrita.</p>
+
+  <h3>📁 Documentación a Presentar</h3>
+  <p>Los documentos deben entregarse en un folder amarillo tamaño carta con nepaco, rotulado con la siguiente información:</p>
+  <ul>
+    <li>Nombre de la beca a la que postulas</li>
+    <li>Nombre completo del estudiante</li>
+    <li>Registro universitario (RU)</li>
+    <li>Nombre de la carrera</li>
+    <li>Nombre de la facultad</li>
+  </ul><p><strong>📢 Importante:</strong> Revisa frecuentemente la página oficial de 
+    <a href="https://www.facebook.com/DireccionUniversitariaDeBienestarSocial" target="_blank">Facebook de la D.U.B.S.</a> 
+    o accede a su 
+    <a href="https://linktr.ee/D.U.B.S.S" target="_blank">Linktree oficial</a> 
+    para conocer nuevas convocatorias, requisitos actualizados, fechas de recepción de documentos y publicación de listas de aceptados.
+  </p>
+            </div>
+          </div>
+        </div>
+        <div id="tabi3" class="tabi-content">
+          <div class="benefits-list">
+            <!-- Contenido para Otros -->
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>BECA ESTUDIO</h3>
+              <p><strong>Artículo 15°-</strong> con la finalidad de apoyar el proceso enseñanza-aprendizaje, se adjudicarán la Beca Estudio, los Estudiantes que deseen adquirir experiencia en su área de profesionalización, al brindar apoyo en las Facultades, unidades, Direcciones Académicas y Administrativas, sala de Cómputo, órganos de Cogobiernos, Centros Internos y la Federación Universitaria Local.<br>
+              <strong>Artículo 16°-</strong> Los Becarios deberán apoyar por 3 horas de lunes a viernes turno mañana o tarde, por el tiempo que dure la beca.<br>
+              <strong>Artículo 17°-</strong> La asignación de la Beca Estudio será de la siguiente manera:<br>
+              El total de las becas ofertadas se distribuirán de manera igualitaria entre las 18 Facultades de la U.A.G.R.M. tomando en cuenta un valor entero.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>BECA ESTUDIO INTERNO ROTATORIO</h3>
+              <p>
+<strong>Artículo 18°-</strong> con la finalidad de apoyar el proceso Enseñanza-Aprendizaje, se adjudicarán la Beca Estudio Internado Rotatorio, los estudiantes de las carreras acreditadas para esa modalidad y que deseen adquirir experiencia en su área de profesionalización, al brindar su servicio en los diferentes hospitales municipales, centros, etc.
+<br><strong>Artículo 19°-</strong> Los Postulantes a esta beca deberán acreditar su habilitación a Internado Rotatorio, con la planilla emitida por Dirección de Carrera.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-left">
+  <h2>Requisitos para Postular a las Becas IDH</h2>
+  <p>Estos requisitos aplican a todas las becas financiadas con recursos del IDH, excepto la Beca a la Excelencia Académica.</p>
+
+  <ol>
+    <li>Ser de nacionalidad boliviana. Debes presentar una fotocopia de tu cédula de identidad vigente.</li>
+    <li>Ser estudiante regular de la U.A.G.R.M. La regularidad será verificada por el sistema según convocatoria.</li>
+    <li>No haber sido beneficiario de becas IDH por más de 5 años consecutivos (excepto en Beca Excelencia Académica, Auxiliares de cátedra o casos especiales del Art. 12 del Reglamento de Beca Comedor).</li>
+    <li><strong>Estudiantes antiguos:</strong> Haber aprobado al menos la mitad más uno de las materias inscritas en el último semestre.</li>
+    <li><strong>Estudiantes en modalidad de graduación:</strong> Pueden postular presentando su historial académico descargado del sistema.</li>
+    <li><strong>Estudiantes nuevos o de traspaso:</strong> Se evaluará únicamente su situación socioeconómica. Deben alcanzar al menos 35 puntos en la ficha socioeconómica.</li>
+    <li>No contar con otra beca o beneficio económico de la universidad, excepto: 
+      <ul>
+        <li>Auxiliares de Docencia</li>
+        <li>Beca Excelencia Académica</li>
+        <li>Casos especiales del Art. 12, inciso b) del Reglamento de Beca Comedor</li>
+      </ul>
+    </li>
+    <li>Completar el formulario de ficha socioeconómica desde tu perfil de estudiante.</li>
+  </ol>
+
+  <p><strong>Nota:</strong> Los ganadores de la experiencia pueden quedar exentos de estos requisitos si presentan una solicitud escrita.</p>
+
+  <h3>📁 Documentación a Presentar</h3>
+  <p>Los documentos deben entregarse en un folder amarillo tamaño carta con nepaco, rotulado con la siguiente información:</p>
+  <ul>
+    <li>Nombre de la beca a la que postulas</li>
+    <li>Nombre completo del estudiante</li>
+    <li>Registro universitario (RU)</li>
+    <li>Nombre de la carrera</li>
+    <li>Nombre de la facultad</li>
+  </ul><p><strong>📢 Importante:</strong> Revisa frecuentemente la página oficial de 
+    <a href="https://www.facebook.com/DireccionUniversitariaDeBienestarSocial" target="_blank">Facebook de la D.U.B.S.</a> 
+    o accede a su 
+    <a href="https://linktr.ee/D.U.B.S.S" target="_blank">Linktree oficial</a> 
+    para conocer nuevas convocatorias, requisitos actualizados, fechas de recepción de documentos y publicación de listas de aceptados.
+  </p>
+            </div>
+          </div>
+        </div>
+        <div id="tabi4" class="tabi-content">
+          <div class="benefits-list">
+            <!-- Contenido para Otros -->
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>BECA INVESTIGACIÓN</h3>
+              <p><strong>Artículo 20°-</strong> El beneficio de la beca Investigación tiene los siguientes objetivos:<br>
+
+a) Promover la titulación de estudiantes a nivel pregrado mediante la realización de investigaciones en la modalidad de Tesis de Grado.<br>
+                
+b) Desarrollar los trabajos de investigación enmarcados en las líneas de investigación definidos por la DICit, los Institutos de Investigación Científica, los Centros de Investigación, los Museos y Observatorios de la U.A.G.R.M.
+
+<br>c) Beneficiar a los estudiantes con recursos no reembolsables para la ejecución de sus trabajos de investigación científica, a ser presentados en eventos científicos (nacionales e internacionales), en las ferias científicas facultativas y la feria de ciencia, Tecnología e Innovación organizada por la DICIT.
+
+<br>d) Beneficiar al estudiante ganador del primer lugar de la Expo ciencia de la gestión anterior, como incentivo al resultado obtenido.
+
+</p><p>Artículo 21°- Las Becas Investigación Científica se clasifican en:
+
+<br>1. Proyectos de Investigación; son aquellos proyectos que se realizan en función de las líneas de investigación de la U.A.G.R.M. los requisitos son:<br>
+
+Haber vencido 2 semestres (carreras semestralizadas) o 1 año (carreras anualizadas), de la carrera que cursa.<br>
+Todos los requisitos estipulados en el Artículo 33 del presente reglamento.<br>
+
+Perfil revisado y aprobado por el director de Investigación de la Facultad o el Director de la Carrera para las Unidades Académicas que no cuenten con Institutos de Investigación y la DICIT.<br>
+
+El perfil del proyecto debe elaborarse de acuerdo al formato establecido por la DCIT.<br>
+
+La presente beca podrá otorgarse de manera individual o grupal, debiendo beneficiar a cada integrante del grupo hasta un máximo de 2 personas.</p><p>
+
+2. Proyectos de investigación modalidad de Tesis de Grado y ganadores de la Expo-ciencia; son los proyectos que permiten al estudiante acceder a un título de profesionalización de pregrado. Los requisitos:
+
+<br>Certificación extendida por el director de carrera acreditando el vencimiento del plan de estudios, exceptuando la modalidad de graduación.
+
+<br>Todos los requisitos estipulados en el Artículo 33 del presente reglamento.
+
+<br>Perfil revisado y aprobado por el Director de Investigación de la Facultad o el director de carrera para las Unidades Académicas que no cuenten con Institutos de Investigación.
+
+<br>El perfil del proyecto debe elaborarse de acuerdo al formato establecido por la facultad que cursa el postulante.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-left">
+  <h2>Requisitos para Postular a las Becas IDH</h2>
+  <p>Estos requisitos aplican a todas las becas financiadas con recursos del IDH, excepto la Beca a la Excelencia Académica.</p>
+
+  <ol>
+    <li>Ser de nacionalidad boliviana. Debes presentar una fotocopia de tu cédula de identidad vigente.</li>
+    <li>Ser estudiante regular de la U.A.G.R.M. La regularidad será verificada por el sistema según convocatoria.</li>
+    <li>No haber sido beneficiario de becas IDH por más de 5 años consecutivos (excepto en Beca Excelencia Académica, Auxiliares de cátedra o casos especiales del Art. 12 del Reglamento de Beca Comedor).</li>
+    <li><strong>Estudiantes antiguos:</strong> Haber aprobado al menos la mitad más uno de las materias inscritas en el último semestre.</li>
+    <li><strong>Estudiantes en modalidad de graduación:</strong> Pueden postular presentando su historial académico descargado del sistema.</li>
+    <li><strong>Estudiantes nuevos o de traspaso:</strong> Se evaluará únicamente su situación socioeconómica. Deben alcanzar al menos 35 puntos en la ficha socioeconómica.</li>
+    <li>No contar con otra beca o beneficio económico de la universidad, excepto: 
+      <ul>
+        <li>Auxiliares de Docencia</li>
+        <li>Beca Excelencia Académica</li>
+        <li>Casos especiales del Art. 12, inciso b) del Reglamento de Beca Comedor</li>
+      </ul>
+    </li>
+    <li>Completar el formulario de ficha socioeconómica desde tu perfil de estudiante.</li>
+  </ol>
+
+  <p><strong>Nota:</strong> Los ganadores de la experiencia pueden quedar exentos de estos requisitos si presentan una solicitud escrita.</p>
+
+  <h3>📁 Documentación a Presentar</h3>
+  <p>Los documentos deben entregarse en un folder amarillo tamaño carta con nepaco, rotulado con la siguiente información:</p>
+  <ul>
+    <li>Nombre de la beca a la que postulas</li>
+    <li>Nombre completo del estudiante</li>
+    <li>Registro universitario (RU)</li>
+    <li>Nombre de la carrera</li>
+    <li>Nombre de la facultad</li>
+  </ul><p><strong>📢 Importante:</strong> Revisa frecuentemente la página oficial de 
+    <a href="https://www.facebook.com/DireccionUniversitariaDeBienestarSocial" target="_blank">Facebook de la D.U.B.S.</a> 
+    o accede a su 
+    <a href="https://linktr.ee/D.U.B.S.S" target="_blank">Linktree oficial</a> 
+    para conocer nuevas convocatorias, requisitos actualizados, fechas de recepción de documentos y publicación de listas de aceptados.
+  </p>
+            </div>
+            </div>
+        </div>
+        <div id="tabi5" class="tabi-content">
+          <div class="benefits-list">
+            <!-- Contenido para Otros -->
+            <div class="benefit-card" data-aos="fade-left">
+              <h3>BECA EXCELENCIA</h3>
+              <p><strong>Artículo 23°-</strong> La Beca a la Excelencia Académica, tiene por objeto incentivar a los estudiantes con los mejores promedios ponderados de la gestión académica anual o semestral de cada carrera; considerando su PPA O PPS, con dos decimales respectivamente y que hubiesen inscrito materias correspondientes a su semestre o año regular.<br>
+            <strong>Artículo 24°-</strong> La Direccion de Tecnologia de la Informacion y Comunicacion (D.T.I.C.) emitira el listado oficial de los beneficiarios por periodo académico semestral o anual, al inicio de la siguiente gestión o semestre a solicitud de la D.U.B.S. 
+            <br><strong>Artículo 26°-</strong> Los requisitos para el beneficio de la beca serán los siguientes:</p><ul><li>
+
+a) Tener uno de los mayores promedios de su carrera en el periodo académico anterior.</li><li>
+b) Haber aprobado al menos el 80% de las materias inscritas.</li></ul>
+<p><strong>Artículo 28°-</strong> Las becas a la Excelencia Académica, se reconocerán para estudiantes que cursan la carrera de origen. No serán beneficiados los estudiantes de carrera paralela y los que ingresen nuevamente a la Universidad en calidad de Profesional.</p>
+          </div>
+          </div>
+        </div>
+        <div id="tabi6" class="tabi-content">
+      <div class="benefit-card" data-aos="fade-left">
+        <p>Las auxiliaturas son apoyos que brinda el estudiante a docentes o unidades de la carrera, y representan una gran oportunidad para reforzar conocimientos, adquirir experiencia.</p>
+<p>Existen dos tipos principales de auxiliaturas:</p>
+<ul>
+  <li><strong>Auxiliatura de cátedra:</strong> Es un apoyo académico en materias específicas. El estudiante auxiliar coordina un horario con el docente para brindar clases de refuerzo o resolver dudas a sus compañeros. Esta actividad ayuda a fortalecer el proceso enseñanza-aprendizaje y se considera como una práctica profesional complementaria.</li>
+  <li><strong>Auxiliatura de sala de cómputo:</strong> El estudiante colabora en el mantenimiento y gestión de las salas de cómputo, apoyando a docentes y estudiantes, organizando recursos o dando asistencia básico.</li>
+</ul>
+<p>Ambas modalidades son <strong>remuneradas según la carga horaria semanal</strong> asignada. El estudiante debe comprometerse a asistir puntualmente, cumplir con sus funciones y mantener una actitud responsable y proactiva.</p>
+<p>Adicionalmente, los estudiantes que ya tienen inscrita su modalidad de grado pueden postular a la <strong>Beca Egreso</strong>, también conocida como <strong>Servicio Académico</strong>. Esta beca permite colaborar en tareas administrativas o de apoyo académico dentro de la carrera o facultad, y también es remunerada según la carga horaria correspondiente.</p>
+      <h3>AUXILIATURAS EN LA CARRERA DE OFIMÁTICA</h3>
+      <p>Las siguientes materias ofrecen plazas de auxiliatura. Se detalla su carga horaria semanal y el cupo de estudiantes auxiliares requeridos:</p>
+      <table style="width:100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background-color: #2d6097;">
+            <th style="border: 1px solid #ccc; padding: 8px;">Materia</th>
+            <th style="border: 1px solid #ccc; padding: 8px;">Sigla</th>
+            <th style="border: 1px solid #ccc; padding: 8px;">Grupo</th>
+            <th style="border: 1px solid #ccc; padding: 8px;">Carga Horaria</th>
+            <th style="border: 1px solid #ccc; padding: 8px;">Cupo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Introducción a la Informática</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OFI111</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OF,I6,I7,I8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">12</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Investigación Operativa</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">MAT375</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">I7</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">12</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Programación</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">INF121</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">I7,I6,I8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">12</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Sistemas Operativos I</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">HAR143</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OF</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">12</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Productos de Oficina II</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OFI134</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OF,I8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Matemática Básica</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">MAT310</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">I7,I8,I9,OF</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">16</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Base de Datos II</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">INF166</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OF</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Temas Especiales I</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">SOF164</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">OF,I8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">12</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Gestión de Sitios Web</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">INF187</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">I8</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">12</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">Salas de Cómputo</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">-</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">-</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">40</td>
+            <td style="border: 1px solid #003366; padding: 7px; font-size: 12px;">9</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="benefit-card" data-aos="fade-right">
+  <h3><i class="fas fa-file-signature"></i> REQUISITOS Y CONDICIONES PARA POSTULAR A AUXILIATURAS</h3>
+
+  <h4> Requisitos Generales</h4>
+  <ul>
+    <li><i class="fas fa-id-card"></i> Fotocopia de Cédula de Identidad</li>
+    <li><i class="fas fa-check-circle"></i> Ser estudiante activo con al menos una materia inscrita (boleta de inscripción)</li>
+    <li><i class="fas fa-university"></i> Certificado de no haber atentado contra la autonomía universitaria</li>
+    <li><i class="fas fa-gavel"></i> Certificado de no haber sido sancionado por conducta irregular</li>
+    <li><i class="fas fa-book"></i> Avance e Histórico Académico</li>
+    <li><i class="fas fa-star"></i> Formulario de Evaluación de Mérito</li>
+  </ul>
+
+  <h4><i class="fas fa-chalkboard-teacher"></i> Condiciones para Auxiliares de Cátedra</h4>
+  <ul>
+    <li><i class="fas fa-ban"></i> No gozar de otros beneficios remunerados</li>
+    <li><i class="fas fa-times-circle"></i> No haber reprobado una misma materia más de 3 veces</li>
+    <li><i class="fas fa-hourglass-half"></i> No tener permanencia mayor a 8 años como estudiante</li>
+    <li><i class="fas fa-calendar-alt"></i> Mínimo 1 año o 2 semestres vencidos</li>
+    <li><i class="fas fa-clipboard-check"></i> Haber aprobado con al menos 51 puntos la materia</li>
+    <li><i class="fas fa-layer-group"></i> Tener aprobadas el 80% de las materias del periodo</li>
+    <li><i class="fas fa-repeat"></i> No haber reprobado más de una vez la asignatura a la que postula</li>
+    <li><i class="fas fa-user-clock"></i> Egresados con materia de titulación pendiente: hasta 2 semestres</li>
+  </ul>
+
+  <h4><i class="fas fa-flask"></i> Condiciones para Salas de Cómputo o Laboratorios</h4>
+  <ul>
+    <li><i class="fas fa-ban"></i> No gozar de otros beneficios remunerados</li>
+    <li><i class="fas fa-calendar-check"></i> Mínimo 2 años o 4 semestres vencidos</li>
+    <li><i class="fas fa-stopwatch"></i> Postulación válida por máximo 2 años</li>
+    <li><i class="fas fa-user-clock"></i> Egresados con titulación pendiente: hasta 2 semestres</li>
+    <li><i class="fas fa-hourglass-half"></i> No tener más de 8 años de permanencia</li>
+    <li><i class="fas fa-times-circle"></i> No haber reprobado más de 3 veces una materia</li>
+  </ul>
+
+  <h4><i class="fas fa-envelope"></i> Solicitud</h4>
+  <ul>
+    <li><i class="fas fa-paper-plane"></i> Carta dirigida al Director de Carrera con datos completos</li>
+    <li><i class="fas fa-folder"></i> Documentación en folder amarillo con nepaco (uno por auxiliatura)</li>
+    <li><i class="fas fa-clock"></i> Máximo de 80 horas programadas entre todas las auxiliaturas</li>
+  </ul>
+    </div>
+<div class="carta-carousel-container">
+  <div class="carousel">
+    <!-- Carta 1 -->
+<div class="benefit-card carta-modelo-card active">
+  <h3>Modelo de Carta: Solicitud de Certificación de No Atentado</h3>
+  <div class="modelo-carta">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, 14 de junio de 2025</p>
+      <br><br>
+
+      <p style="text-align: left;">
+        Señor:<br>
+        Secretario General<br>
+        U.A.G.R.M.<br>
+        Presente.-
+      </p>
+      <br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD DE CERTIFICACIÓN DE NO HABER ATENTADO CONTRA LA AUTONOMÍA UNIVERSITARIA.</strong>
+      </p>
+      <br><br>
+
+      <p style="text-align: justify;">Distinguido Licenciado:</p>
+      <br>
+
+      <p style="text-align: justify;">
+        Brindarle un cordial saludo y desearle éxitos en sus funciones, el motivo de la presente es solicitarle la
+        <strong>Certificación de NO HABER ATENTADO CONTRA LA AUTONOMÍA UNIVERSITARIA</strong>, misma que es un requisito
+        indispensable para participar como auxiliar.
+      </p>
+      <br>
+
+      <p style="text-align: justify;">Sin otro particular, me despido atentamente.</p>
+      <br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre del Estudiante<br>
+        Registro: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f9f9f9; padding: 12px; border-left: 4px solid #0074D9;">
+      <p><strong>Debe anexar:</strong> Fotocopia de C.I. firmado, Boleta de Inscripción o Avance académico, copia de la carta para su recibido.</p>
+      <p><strong>Tiempo de entrega:</strong> 48h.</p>
+      <p><strong>Lugar:</strong> Secretaría de rectorado (Campus).</p>
+    </div>
+  </div>
+</div>
+
+<div class="benefit-card carta-modelo-card active">
+  <h3>Modelo de Carta: Solicitud de Certificado de Antecedentes</h3>
+  <div class="modelo-carta">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, 14 de junio de 2025</p>
+      <br><br>
+
+      <p style="text-align: left;">
+        Señor:<br>
+        Tribunal de Primera Instancia<br>
+        U.A.G.R.M.<br>
+        Presente.-
+      </p>
+      <br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD DE CERTIFICACIÓN DE ANTECEDENTES UNIVERSITARIOS.</strong>
+      </p>
+      <br><br>
+
+      <p style="text-align: justify;">Distinguido Licenciado:</p>
+      <br>
+
+      <p style="text-align: justify;">
+        Brindarle un cordial saludo y desearle éxitos en sus funciones, el motivo de la presente es solicitarle la
+        <strong>Certificación de NO HABER SIDO SOMETIDO A PROCESOS UNIVERSITARIOS</strong>, misma que es un requisito
+        indispensable para participar como auxiliar.
+      </p>
+      <br>
+
+      <p style="text-align: justify;">Sin otro particular, me despido atentamente.</p>
+      <br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre del Estudiante<br>
+        Registro: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f9f9f9; padding: 12px; border-left: 4px solid #0074D9;">
+      <p><strong>Debe anexar:</strong> Fotocopia de C.I. firmado, Boleta de Inscripción o Avance académico, copia de la carta para su recibido.</p>
+      <p><strong>Tiempo de entrega:</strong>10min a 48h.</p>
+      <p><strong>Lugar:</strong> Corte Electoral Oficina de Tribunal de Primera Instancia (Campus).</p>
+    </div>
+  </div>
+</div>
+<div class="benefit-card carta-modelo-card active">
+  <h3>Modelo de Carta: Solicitud de Certificado de Antecedentes</h3>
+  <div class="modelo-carta">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, 14 de junio de 2025</p>
+      <br><br>
+
+      <p style="text-align: left;">
+        Señor:<br>
+        Tribunal de Apelaciones<br>
+        U.A.G.R.M.<br>
+        Presente.-
+      </p>
+      <br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD DE CERTIFICACIÓN DE ANTECEDENTES UNIVERSITARIOS.</strong>
+      </p>
+      <br><br>
+
+      <p style="text-align: justify;">Distinguido Licenciado:</p>
+      <br>
+
+      <p style="text-align: justify;">
+        Brindarle un cordial saludo y desearle éxitos en sus funciones, el motivo de la presente es solicitarle la
+        <strong>Certificación de NO HABER SIDO SOMETIDO A PROCESOS UNIVERSITARIOS</strong>, misma que es un requisito
+        indispensable para participar como auxiliar.
+      </p>
+      <br>
+
+      <p style="text-align: justify;">Sin otro particular, me despido atentamente.</p>
+      <br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre del Estudiante<br>
+        Registro: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f9f9f9; padding: 12px; border-left: 4px solid #0074D9;">
+      <p><strong>Debe anexar:</strong> Fotocopia de C.I. firmado, Boleta de Inscripción o Avance académico, copia de la carta para su recibido.</p>
+      <p><strong>Tiempo de entrega:</strong>10min a 48h.</p>
+      <p><strong>Lugar:</strong> Corte Electoral Oficina de Tribunal de Apelaciones (Campus).</p>
+    </div>
+  </div>
+</div>
+<div class="benefit-card carta-modelo-card active">
+  <h3>Modelo de Carta: Solicitud de Emisión de Formulario</h3>
+  <div class="modelo-carta">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, 14 de junio de 2025</p>
+      <br><br>
+
+      <p style="text-align: left;">
+        Señor(a):<br>
+        Ing. Maria del Carmen Ribera Robles<br>
+        Directora de Carrera de Ofimática<br>
+        Facultad Politécnica<br>
+        U.A.G.R.M.<br>
+        Presente.-
+      </p>
+      <br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD DE EMISIÓN DE FORMULARIO AUXILIAR</strong>
+      </p>
+      <br><br>
+
+      <p style="text-align: justify;">Distinguida Ingeniera:</p>
+      <br>
+
+      <p style="text-align: justify;">
+        Brindarle un cordial saludo y desearle éxitos en sus funciones, el motivo de la presente es solicitarle la
+        <strong>EMISIÓN DE FORMULARIO DE EVALUACIÓN DE MÉRITOS PARA AUXILIAR DE (CATEDRA O SALAS DE CÓMPUTO)</strong>, misma que es un requisito
+        indispensable para participar como auxiliar.
+      </p>
+      <table class ="tabla-carta" style="width: 80%; border-collapse: collapse; margin-top: 20px;">
+        <tr>
+          <th style="color: #000; border: 1px solid #000;">    Nombre    </th>
+          <th style="color: #000; border: 1px solid #000;">   Registro   </th>
+          <th style="color: #000; border: 1px solid #000;">   Materia    </th>
+          <th style="color: #000; border: 1px solid #000;">   Grupo       </th>
+        </tr>
+        <tr>
+          <td>Estudiante</td>
+          <td>231412458</td>
+          <td>Sigla</td>
+          <td>Grupo</td>
+        </tr>
+      </table>
+      <br>
+
+      <p style="text-align: justify;">Sin otro particular, me despido atentamente.</p>
+      <br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre del Estudiante<br>
+        Registro: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f9f9f9; padding: 12px; border-left: 4px solid #0074D9;">
+      <p><strong>Nota:</strong> sólo si no se puede solicitar el formulario directamente de CPD</p>
+      <p><strong>Debe anexar:</strong> Fotocopia de C.I. firmado, Boleta de Inscripción o Avance académico, copia de la carta para su recibido.</p>
+      <p><strong>Lugar:</strong> Direccion de Carrera Ofimática</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <!-- Botones de navegación -->
+  <div class="carousel-controls">
+    <button onclick="moverCarousel(-1)">&#10094; Anterior</button>
+    <button onclick="moverCarousel(1)">Siguiente &#10095;</button>
+  </div>
+        </div>
+       <div id="tabi7" class="tabi-content">
+<div class="benefit-card" data-aos="fade-left">
+  <h3>🚀 Carrera Paralela - UAGRM (Facultativo e Interfacultativo)</h3>
+  <p><strong>Descripción:</strong> Permite cursar simultáneamente otra carrera dentro de la UAGRM, fortaleciendo tu formación profesional y ampliando tus oportunidades académicas y laborales.</p>
+
+  <h4>⚙️ Requisitos Generales:</h4>
+  <ul>
+    <li>✅ Haber aprobado al menos el <strong>35 %</strong> del plan de estudios de tu carrera de origen (licenciatura o técnico superior).</li>
+    <li>✅ Haber aprobado al menos una materia en la gestión académica anterior (excepto si ya culminaste tu plan de estudios).</li>
+    <li>✅ Si ya concluiste tu plan de estudios, puedes solicitar Carrera Paralela solo en la gestión académica siguiente al registro de la modalidad de graduación (GRL, GDI, GRT).</li>
+    <li>❌ No haber recibido el beneficio anteriormente (se otorga una sola vez).</li>
+    <li>❌ No pertenecer a convenios especiales (Andrés Bello, Brasil-Bolivia, INSAF, SEDUCA, Zamorano, etc.).</li>
+     <li>💵 Realiza el pago del <strong>Histórico Académico (Bs 40)</strong>:
+      <ul>
+        <li>Habilita el pago desde tu perfil web de estudiante</li>
+        <li>Paga en banco habilitado y recoge el documento en Sección Notas</li>
+      </ul>
+      </li>
+  </ul>
+  <h4>🏛️ Procedimiento Carrera Paralela <u>Facultativo</u>:</h4>
+  <ol>
+    <li>📝 Solicita el <strong>Formulario de Carrera Paralela</strong> en la ventanilla de <strong>CPD</strong> de tu Facultad de origen:
+      <ul>
+        <li>Presenta tu cédula original y fotocopia.</li>
+        <li>Adjunta una carta dirigida al encargado del CPD Facultativo.</li>
+      </ul>
+    </li>
+    <li>📨 Lleva el formulario al <strong>Director de Carrera</strong> de tu Facultad para su firma.</li>
+    <li>📁 Luego, preséntalo ante el <strong>Decano</strong> de tu Facultad para su validación.</li>
+    <li>💲 Si es aprobado, paga el aporte correspondiente en la caja de tu Facultad y entrega el comprobante en Secretaría General.</li>
+    <li>✅ El Decanato remite el formulario al CPD Facultativo para su ejecución conforme al calendario académico.</li>
+  </ol>
+
+  <h4>🏛️ Procedimiento Carrera Paralela <u>Interfacultativo</u>:</h4>
+  <ol>
+    <li>📝 Solicita el <strong>Formulario de Carrera Paralela Interfacultativo</strong> en la ventanilla de <strong>Extensión Universitaria</strong> o CPD de tu Facultad de origen.</li>
+    <li>📨 Lleva el formulario a la <strong>Facultad de interés</strong> (donde deseas estudiar) y realiza el siguiente recorrido:
+      <ul>
+        <li>🔹 Firma del <strong>Director de Carrera</strong> de la nueva carrera.</li>
+        <li>🔹 Firma del <strong>Decano</strong> de la nueva Facultad.</li>
+      </ul>
+    </li>
+    <li>💲 Si la solicitud es aceptada, paga el aporte correspondiente en la caja de la Facultad de interés y entrega el comprobante en Secretaría General de esa misma Facultad.</li>
+    <li>✅ Finalmente, el Decanato de la Facultad de interés remite el formulario al CPD correspondiente para su ejecución según el calendario académico.</li>
+  </ol>
+
+  <h4>📌 Notas Importantes:</h4>
+  <ul>
+    <li>🎓 El beneficio de Carrera Paralela solo puede ser solicitado <strong>una vez</strong> durante tu permanencia como estudiante de la UAGRM.</li>
+    <li>🌐 Aplica tanto para carreras presenciales como virtuales, dependiendo de la disponibilidad.</li>
+    <li>🗓️ Todos los trámites deben realizarse dentro de las fechas definidas en el <strong>calendario académico</strong> de la UAGRM.</li>
+  </ul>
+  <h4>⚠️ ¿Cómo cuidar tu Carrera Paralela?</h4>
+<ul>
+  <li>🎯 Mantén tu <strong>promedio aprobado</strong> y un buen rendimiento académico. Es recomendable no bajar de 51 puntos en tus materias.</li>
+  <li>❌ No repruebes más de <strong>3 materias en la carrera paralela</strong>. Esto puede causar que te retiren el beneficio.</li>
+  <li>📌 Recuerda que <strong>primero debes inscribirte en tu carrera de origen</strong> y luego en la paralela. Si en la carrera paralela inscriben antes, espera a los rezagados (reinscripción tardía).</li>
+  <li>⏳ Revisa bien los <strong>calendarios académicos</strong> de ambas facultades y estate atento a las fechas para no quedarte fuera.</li>
+  <li>⛔ Si dejas de cursar materias o si te va mal por varias gestiones, puedes perder la carrera paralela. No se puede volver a pedir, se otorga solo una vez.</li>
+  <li>💸 Si terminas primero la carrera paralela y no te gradúas de la carrera de origen, puedes pasar a ser considerado <strong>“estudiante profesional”</strong> y pagar más por tus materias.</li>
+</ul>
+</div>
+<div class="benefit-card" data-aos="fade-left">
+  <h3>📝 Modelo de Carta: Solicitud de Carrera Paralela Facultativo</h3>
+  <div class="modelo-carta">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, ____ de __________ de 20__</p>
+      <br><br>
+
+      <p style="text-align: left;">
+        Señor(a):<br>
+        Encargado(a) del CPD Facultativo / Extensión Universitaria<br>
+        Facultad de ________________________<br>
+        Presente.-
+      </p>
+      <br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD EMISIÓN DE FORMULARIO PARA CARRERA PARALELA</strong>
+      </p>
+      <br><br>
+
+      <p style="text-align: justify;">Distinguido(a) Licenciado(a):</p>
+      <br>
+
+      <p style="text-align: justify;">
+Mediante la presente, solicito a su persona la emisión de formulario para CARRERA PARALELA en la Facultad de Ciencias Económicas y Empresariales correspondiente al semestre II/2024, de acuerdo al siguiente detalle:
+<p>
+  <table>
+    <tr style="color: #000;">
+      <th colspan="2">Datos de Solicitud</th>
+    </tr>
+    <tr><td>Nombre completo</td><td>[nombre estudiante]</td></tr>
+    <tr><td>Registro</td><td>[Número de rgistro]</td></tr>
+    <tr><td>Celular</td><td>[número celular]</td></tr>
+    <tr><td>Carnet de Identidad</td><td>[Número de carnet]</td></tr>
+    <tr><td>Carrera Actual</td><td>[nombre carrera actual]</td></tr>
+    <tr><td>Carrera Destino</td><td>[Nombre de carrera destino]</td></tr>
+  </table>
+</p>
+</p>
+      <br>
+
+      <p style="text-align: justify;">Sin otro particular, me despido con las consideraciones más distinguidas.</p>
+      <br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre completo del estudiante<br>
+        Registro Universitario: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f9f9f9; padding: 12px; border-left: 4px solid #0074D9;">
+      <p><strong>Adjuntar:</strong> Fotocopia de C.I. firmada, boleta de inscripción o historial académico (avance), y copia de la carta para su recibido.</p>
+      <p><strong>Importante:</strong> Esta carta se presenta en la Facultad de origen junto al formulario, antes de ir a la Facultad de destino.</p>
+    </div>
+  </div>
+</div>
+
+
+       </div>
+        <div id="tabi8" class="tabi-content">
+  <div class="benefits-list">
+        <!-- CAMBIO DE CARRERA -->
+    <div class="benefit-card" data-aos="fade-left">
+      <h3>🔄 Cambio de Carrera - UAGRM (Facultativo e Interfacultativo)</h3>
+      <p><strong>Descripción:</strong> El Cambio de Carrera permite a los estudiantes redirigir su vocación académica hacia otra área del conocimiento, dentro de la misma facultad (facultativo) o en otra diferente (interfacultativo), según sus intereses y objetivos profesionales.</p>
+
+      <h4>⚙️ Requisitos Generales:</h4>
+      <ul>
+        <li>✅ Haber cursado un semestre (si es nuevo).</li>
+        <li>✅ Haber aprobado al menos una materia en la gestión académica anterior.(si es antiguo)</li>
+        <li>✅ No haber abandonado tu carrera por más de dos gestiones consecutivas.</li>
+        <li>❌ No haber recibido previamente este beneficio (se otorga una sola vez).</li></ul>
+
+          <h4>📝 Pasos para el Cambio facultativo:</h4>
+          <ul>
+        <li>💵 Realizar el pago en las entidades:
+          <ul>
+            <li>Histórico académico Bs. 40</li>
+            <li>Fotocopia de carnet de identidad</li>
+          </ul>
+        </li>
+        <li>Una vez cancelado el histórico de Bs. 40 apersonarse a ventanillas de CPD facultativo para solicitar la emisión del histórico académico.</li>
+        <li>Una vez emitido el formulario de cambio de carrera, se dirige a direción de carrera de la carrera a la que se va a cambiar para la firma y pie de firma del jefe ed carrera y decano</li>
+         <li>💵 Si tu solicitud es aceptada:
+      <ul>
+        <li>Realiza el pago de Bs. 300 por concepto de cambio de carrera.</li>
+        <li>Adjuntar el formulario con las respectivas firmas y posteriormente dirigirse a secretaría del Dpto. de Registros y Trámites para solicitar la firma del jefe de departamento.</li>
+      </ul>
+    </li>
+    <li>✅ CPD envía todas las solicitudes emitidas a secretaría del DPTO. de admisiones para solicitar la firma del jefe de DPTO.</li>
+    <li>El jefe de admsiones y registros deriva a la encargada para el proceso de las solicitudes</li>
+  </ol>
+      </ul>
+
+      <h4>📝 Pasos para el Cambio Interfacultativo:</h4>
+  <ol>  <ul><li>💵 Realizar el pago en las entidades:
+          <ul>
+            <li>Histórico académico Bs. 40</li>
+            <li>Test Psicotécnico Bs. 3</li>
+            <li>Certificado de no deudor Bs. 30</li>
+            <li>Fotocopia de carnet de identidad</li>
+          </ul>
+        </li>
+        <li>Una vez cancelado el histórico de Bs. 40 se dirige a la ventanilla de sección de notas para solicitar la emisión del histórico académico.</li>
+        <li>Una vez cancelado el certificado de no deudor Bs. 30 se dirige a la ventanilla sección de archivo para solicitar la emisión del certificado de no deudor.</li>
+        <li>Una vez cancelado el test Psicotécnico Bs. 3 se dirige al Dpto. de orientación (2do anillo casi charcas)</li>
+      </ul>
+    <li>📥Cuando tenga emitido el histórico académico, el certificado de no deudor y el test psicotécnico, apersonarse a ventanilla de extensión para solicitar el formulario de cambio de carrera.</li>
+     <li>📨 Entrega el formulario al Director de Carrera a la que se va a cambiar para su aprobación.</li>
+    <li>💵 Si tu solicitud es aceptada:
+      <ul>
+        <li>Realiza el pago de Bs. 300 por concepto de cambio de carrera.</li>
+        <li>Adjuntar el formulario con las respectivas firmas y posteriormente dirigirse a secretaría del Dpto. de Registros y Trámites para solicitar la firma del jefe de departamento.</li>
+      </ul>
+    </li>
+    <li>✅ Finalmente cuando se haya recabado todas las firmas apersonarse por ventanilla de exensión para la ejecución del formulario y concluir con el trámite de cambio de carrera.</li>
+  </ol>
+     
+      <h4>🎁 Beneficios del Cambio de Carrera:</h4>
+      <ul>
+        <li>📚 Redirección de tu vocación profesional sin tener que abandonar la universidad.</li>
+        <li>🎯 Continuidad de tu formación académica con posibilidad de revalidación de materias afines.</li>
+        <li>💼 Posibilidad de acceder a carreras con mayor afinidad a tus metas personales y profesionales.</li>
+      </ul>
+
+      <h4>📌 Condiciones y Recomendaciones:</h4>
+      <ul>
+        <li>📆 El trámite debe realizarse dentro de las fechas estipuladas en el <strong>calendario académico</strong>.</li>
+        <li>📑 Algunas materias pueden ser revalidadas según compatibilidad curricular.</li>
+        <li>❗ Este beneficio solo se puede solicitar una vez durante tu permanencia como estudiante UAGRM.</li>
+        <li>🧭 Se recomienda consultar previamente con Dirección de Carrera sobre compatibilidad de materias.</li>
+      </ul>
+      <a href="https://files.uagrm.edu.bo/entidad/213/file/CAMBIO_DE_CARRERA_MISMA_FACULTAD.pdf" target="_blank" class="btn btn-primary">Facultativo Oficial</a>
+      <a href="https://files.uagrm.edu.bo/entidad/213/file/FLUJOGRAMAS_2024/CAMBIO_DE_CARRERA_INTERFACULTAD.pdf" target="_blank" class="btn btn-primary">Interfacultativo Oficial</a>
+    </div>
+<div class="modelo-carta" style="background-color: #fff;">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, ____ de __________ de 20__</p>
+      <br><br>
+
+      <p style="text-align: left;">
+        Señor(a):<br>
+        Encargado(a) del CPD Facultativo / Extensión Universitaria<br>
+        Facultad de ________________________<br>
+        Presente.-
+      </p>
+      <br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD EMISIÓN DE FORMULARIO PARA CAMBIO DE CARRERA</strong>
+      </p>
+      <br><br>
+
+      <p style="text-align: justify;">Distinguido(a) Licenciado(a):</p>
+      <br>
+
+      <p style="text-align: justify;">
+Mediante la presente, solicito a su persona la emisión de formulario para CAMBIO DE CARRERA DENTRO DE LA MISMA FACULTAD de Ciencias Económicas y Empresariales correspondiente al semestre II/2024, de acuerdo al siguiente detalle:
+<p>
+  <table>
+    <tr style="color: #000;">
+      <th colspan="2">Datos de Solicitud</th>
+    </tr>
+    <tr><td style="color: #000;">Nombre completo</td><td style="color: #161616;">[nombre estudiante]</td></tr>
+    <tr><td style="color: #000;">Registro</td><td style="color: #161616;">[Número de rgistro]</td></tr>
+    <tr><td style="color: #000;">Celular</td><td style="color: #161616;">[número celular]</td></tr>
+    <tr><td style="color: #000;">Carnet de Identidad</td><td style="color: #161616;">[Número de carnet]</td></tr>
+    <tr><td style="color: #000;">Carrera Actual</td><td style="color: #161616;">[nombre carrera actual]</td></tr>
+    <tr><td style="color: #000;">Carrera Destino</td><td style="color: #161616;">[Nombre de carrera destino]</td></tr>
+  </table>
+</p>
+</p>
+      <br>
+
+      <p style="text-align: justify;">Sin otro particular, me despido con las consideraciones más distinguidas.</p>
+      <br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre completo del estudiante<br>
+        Registro Universitario: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f9f9f9; padding: 12px; border-left: 4px solid #0074D9;">
+      <p><strong>Adjuntar:</strong> Fotocopia de C.I. firmada, boleta de inscripción o historial académico (avance), y copia de la carta para su recibido.</p>
+      <p><strong>Importante:</strong> Esta carta se presenta en la Facultad de origen junto al formulario, antes de ir a la Facultad de destino.</p>
+    </div>
+  </div>
+      </div>
+      </div>
+        <div id="tabi9" class="tabi-content">
+  <div class="benefits-list">
+ <!-- CASOS ESPECIALES -->
+<div class="benefit-card" data-aos="fade-left">
+  <h3><i class="fas fa-star"></i> Casos Especiales</h3>
+
+  <p><strong>🎓 Beneficio:</strong> Permite adelantar o nivelarse en el plan de estudios, inscribiendo una materia requisito y su correlativa (ejemplo: Lenguaje I y Lenguaje II), hasta un máximo de <strong>8 materias</strong> por gestión, fuera de los procesos regulares.</p>
+
+  <p>Ideal si reprobaste una materia clave y deseas continuar sin retrasos o si deseas avanzar de forma más rápida en tu carrera.</p>
+
+  <h4>⚙️ Proceso:</h4>
+  <ol>
+    <li>Solicita el <strong>formulario de caso especial</strong> en ventanilla de Exención o Trámites.</li>
+    <li>Redacta la <strong>carta de solicitud</strong> dirigida al Director de Carrera.</li>
+    <li>Acude a caja con la carta y el formulario, y realiza el pago de <strong>Bs 10</strong>.</li>
+    <li>Reúne todos los requisitos y colócalos en un <strong>folder amarillo tamaño carta con nepaco</strong>, en el siguiente orden:
+      <ul>
+        <li>Formulario de caso especial (llenado y firmado)</li>
+         <li><strong>Comprobante de pago</strong></li>
+    <li>Carta de solicitud de adición de materia por caso especial, dirigida al <strong>Director de Carrera</strong></li>
+    <li>Comprobante de pago de <strong>Bs 10</strong></li>
+    <li>Avance académico descargado desde tu perfil de estudiante</li>
+    <li>Boleta de inscripción actual</li>
+    <li>Malla curricular con materias resaltadas:
+      <ul>
+        <li><span style="background-color: #ffff99;">Amarillo claro:</span> Materias vencidas</li>
+        <li><span style="background-color: #ccffcc;">Verde claro:</span> Materias inscritas</li>
+        <li><span style="background-color: #ff9999;">Rojo:</span> Materias a solicitar como caso especial</li>
+      </ul>
+    </li>
+    <li>Fotocopia de Cédula de Identidad</li>
+      </ul>
+    </li>
+    <li>En la tapa del folder escribe:
+      <ul>
+        <li><strong>Nombre completo</strong></li>
+        <li><strong>Número de registro</strong></li>
+        <li><strong>Sigla de materias a adicionar</strong></li>
+        <li><strong>Teléfono</strong></li>
+        <li><strong>Semestre</strong></li>
+      </ul>
+    </li>
+    <li>Entrega el folder en oficinas de dirección de carrera y espera aprobación por parte del Director de Carrera.</li>
+  </ol>
+
+  <h4>📌 Condiciones Importantes:</h4>
+  <ul>
+    <li>Puede solicitarse hasta <strong>6 veces durante la carrera</strong></li>
+    <li>No debe haber <strong>cruce de horarios</strong> entre las materias solicitadas</li>
+    <li>No se deben generar <strong>huecos o puentes</strong> en el horario</li>
+    <li>Requiere el visto bueno (V°B°) del Jefe de Carrera y Decano</li>
+    <li>Ser estudiante regular, sin sanciones ni deudas académicas</li>
+  </ul>
+</div>
+    <!-- CIERRE DE KARDEX -->
+    <div class="benefit-card" data-aos="fade-right">
+      <h3><i class="fas fa-archive"></i> Cierre de Kardex</h3>
+      <p><strong>Beneficio:</strong> Inscripción de tus últimas materias del plan de estudios (incluyendo prácticas o modalidad de graduación).</p>
+      <h4>⚙️ Proceso:</h4>
+      <ol>
+        <li>Carta dirigida al Jefe del Dpto. de Admisiones y Registros (con V°B° del Jefe de Carrera).</li>
+        <li>Habilita el pago de <strong>Bs 10</strong> desde tu perfil de estudiante.</li>
+        <li>Paga en entidad financiera habilitada.</li>
+        <li>Imprime la boleta de inscripción de tu perfil.</li>
+        <li>Verifica que tengas inscrita al menos una materia en periodo normal.</li>
+        <li>Acude a ventanilla de Traspasos para ejecutar el trámite.</li>
+      </ol>
+      <h4>📌 Requisitos:</h4>
+      <ul>
+        <li>Estar cursando el último semestre o año de carrera.</li>
+        <li>No haber realizado cierre de kardex previamente.</li>
+        <li>No tener bloqueos académicos o financieros.</li>
+      </ul>
+        <p><strong>📝 Nota:</strong> Este proceso permite tomar todas las materias que tengas pendientes junto a la modalidad para terminar la carrera. Aunque se permite el choque de horarios entre materias, no es lo recomendado. <br>Para que sea aceptado por la Dirección de Carrera, el cruce entre materias no debe superar los <strong>15 minutos</strong>.</p>
+<a href="https://files.uagrm.edu.bo/entidad/213/file/FLU-2022/CIERRE_DE_KARDEX_ULTIMO.pdf" target="_blank" class="btn btn-primary">Cierre de Kardex Oficial</a>
+    </div>
+<!-- MODELO DE CARTA: CERTIFICADO DE ANTECEDENTES -->
+<div class="benefit-card" data-aos="fade-left">
+  <h3><i class="fas fa-file-alt"></i> Modelo de Carta: Solicitud de Caso Especial</h3>
+
+  <div class="modelo-carta">
+    <div class="hoja" style="padding: 20px; font-family: Georgia, serif; line-height: 1.6; font-size: 16px; background-color: #fff; border: 1px solid #ccc; border-radius: 6px;">
+      <p style="text-align: right;">Santa Cruz de la Sierra, 14 de junio de 2025</p><br><br>
+
+      <p>
+       Señor(a):<br>
+Ing. Maria del Carmen Ribera Robles<br>
+Directora de Carrera de Ofimática<br>
+Facultad Politécnica<br>
+U.A.G.R.M.<br>
+Presente.-
+
+
+      </p><br><br>
+
+      <p style="text-align: center;">
+        <strong>REF.: SOLICITUD DE CASO ESPECIAL</strong>
+      </p><br><br>
+
+      <p>Distinguido Licenciado:</p><br>
+
+      <p style="text-align: justify;">
+        Brindarle un cordial saludo y desearle éxitos en sus funciones, mediante solicito a su autoridad la inscripción por caso especial de las siguientes materias:
+      </p><br>
+      <table class="tabla-carta" style="width: 80%; border-collapse: collapse; margin-top: 20px;">
+        <tr>
+          <th style="color: #000; border: 1px solid #000;">    Materia    </th>
+          <th style="color: #000; border: 1px solid #000;">   Sigla   </th>
+          <th style="color: #000; border: 1px solid #000;">   Grupo  </th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #000;">OFI-101</td>
+          <td style="border: 1px solid #000;">materia I</td>
+          <td style="border: 1px solid #000;">4</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #000;">OFI-102</td>
+          <td style="border: 1px solid #000;">materia II</td>
+          <td style="border: 1px solid #000;">4</td>
+        </tr>
+        </table>
+<p>Por los siguientes motivos:</p>
+<ul><li>Aprobar en menor tiempo las materias que me faltan en mi malla curricular</li><li>Nivelarme</li><li>Otros motivo......................</li></ul>
+      <p style="text-align: justify;">Sin otro particular le agradezco de antemano su valiosa colaboración. A la espera de una respuesta favorable a mi solicitud, me despido atentamente.</p><br><br><br>
+
+      <p style="text-align: center;">
+        ___________________________<br>
+        Nombre del Estudiante<br>
+        Registro: ___________<br>
+        C.I.: ___________
+      </p>
+    </div>
+
+    <div class="nota-carta" style="margin-top: 20px; background-color: #f1faff; padding: 12px 16px; border-left: 4px solid #0074D9; border-radius: 4px;">
+      <p><strong>Debe anexar:</strong> Fotocopia de C.I. firmada, Boleta de Inscripción o Avance Académico, copia de la carta para su recibido.</p>
+      <p><strong>Tiempo de entrega:</strong> 10 minutos a 48 horas.</p>
+      <p><strong>Lugar:</strong> Corte Electoral - Oficina de Tribunal de Apelaciones (Campus).</p>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  let indiceCarta = 0;
+  const cartas = document.querySelectorAll('.carta-modelo-card');
+
+  function mostrarCarta(index) {
+    cartas.forEach((carta, i) => {
+      carta.classList.remove('active');
+      if (i === index) carta.classList.add('active');
+    });
+  }
+
+  function moverCarousel(direccion) {
+    indiceCarta += direccion;
+    if (indiceCarta >= cartas.length) indiceCarta = 0;
+    if (indiceCarta < 0) indiceCarta = cartas.length - 1;
+    mostrarCarta(indiceCarta);
+  }
+
+  // Mostrar la primera carta al cargar
+  mostrarCarta(indiceCarta);
+</script>
+
+  <script src="nodes.js"></script>
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+
+    function showtabi(id) {
+      document.querySelectorAll('.tabi-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tabi-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tabi-btn[onclick*="${id}"]`).classList.add('active');
+    }
+  </script>
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+</body>
+</html>

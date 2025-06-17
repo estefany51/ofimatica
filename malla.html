@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malla Curricular</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -9,9 +10,9 @@
 <body>
     <!-- Fondo animado con canvas -->
   <canvas id="node-background"></canvas>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
   <aside class="sidebar" id="sidebar">
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     <nav class="menu">
       <a href="index.html"><i class="fas fa-home"></i><span class="text">Inicio</span></a>
       <a href="malla.html" class="active"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
@@ -22,7 +23,7 @@
       <a href="contacto.html"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
     </nav>
   </aside>
-<aside class="aux-bar">
+<aside class="aux-bar" id="auxBar">
   <h3>📘 Auxiliaturas <br>Cátedra</h3>
   <ul>
     <li onclick="toggleDetalle(this)">
@@ -84,9 +85,9 @@
     <li onclick="toggleDetalle(this)">
       Temas Especiales I
       <div class="detalle">
-        <strong>Auxiliar:</strong> Diego Vargas<br>
-        <strong>Horario:</strong> Lun y Mié 15:00 - 16:30<br>
-        <strong>Aula:</strong> 212-03
+        <strong>Auxiliar:</strong>Yusahara Arias<br>
+        <strong>Horario:</strong> Lun 15:00 - 16:00<br>
+        <strong>Aula:</strong> 212-50
       </div>
     </li>
     <li onclick="toggleDetalle(this)">
@@ -104,21 +105,21 @@
     <li onclick="toggleDetalle(this)">
       Turno Mañana
       <div class="detalle">
-        <strong>Auxiliar:</strong> Rodrigo Arteaga<br> Carla López<br> Carla López<br>
+        <strong>Auxiliar:</strong> Rodrigo Arteaga<br> Yaquelin Ipi<br>Pendiente<br>
         <strong>Horario:</strong> Lun a vie 07:00 - 12:30<br>
       </div>
     </li>
     <li onclick="toggleDetalle(this)">
       Turno Tarde
       <div class="detalle">
-        <strong>Auxiliar:</strong> Natalia Roque<br>Julio<br> Carla López<br>
+        <strong>Auxiliar:</strong> Natalia Roque<br>Albert Ramirez<br>Joel Ardaya<br>
         <strong>Horario:</strong> Lun a vie 12:00 - 17:30<br>
       </div>
     </li>
     <li onclick="toggleDetalle(this)">
     Turno Noche
       <div class="detalle">
-        <strong>Auxiliar:</strong>Diego Graz<br>Richard<br> Carla López<br>
+        <strong>Auxiliar:</strong>Diego Graz<br>Richard Maira<br> Julio Ramos<br>
         <strong>Horario:</strong> Lun a vie 17:00 - 22:00<br>
       </div>
     </li>
@@ -311,6 +312,7 @@
 </div>
 <div class="Horario">
   <h2>1er Semestre</h2>
+  <div class="horario-wrapper">
   <table border="1" class="horario-table">
     <thead>
       <tr>
@@ -321,28 +323,29 @@
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
       <tr><td>07:00</td><td>07:45</td><td></td><td></td><td ></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>07:45</td><td>08:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>08:30</td><td>09:15</td><td rowspan="2">MAT310 I9</td><td></td><td></td><td></td><td rowspan="2">LEN312-OF<td></td><td></td><td><td rowspan="2">MAT310 I9</td><td></td></tr>
-      <tr><td>09:15</td><td>10:00</td><td></td><td></td><td></td><td></td><td rowspan="3">HAR111 OF<td></td><td></td></tr>
+      <tr><td>08:30</td><td>09:15</td><td rowspan="2">MAT310<br>I9</td><td></td><td></td><td></td><td rowspan="2">LEN312<br>OF</td><td></td><td></td><td></td><td rowspan="2">MAT310<br>I9</td><td></td></tr>
+      <tr><td>09:15</td><td>10:00</td><td></td><td></td><td></td><td></td><td rowspan="3">HAR111<br>OF</td><td></td><td></td></tr>
       <tr><td>10:00</td><td>10:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>10:45</td><td>11:30</td><td></td><td></td><td rowspan="3">HAR111 OF</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>11:30</td><td>12:15</td><td></td><td></td><td></td><td rowspan="2">LEN311 OF</td><td></td><td></td><td rowspan="2">LEN311 OF</td><td rowspan="4">LEN311 I9</td><td></td></tr>
-      <tr><td>12:15</td><td>13:00</td><td rowspan="2">EMP210 I9</td><td></td><td></td><td rowspan="2">EMP210 I9</td><td></td><td></td></tr>
+      <tr><td>10:45</td><td>11:30</td><td></td><td></td><td rowspan="3">HAR111<br>OF</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>11:30</td><td>12:15</td><td></td><td></td><td></td><td rowspan="2">LEN311<br>OF</td><td></td><td></td><td rowspan="2">LEN311<br>OF</td><td rowspan="4">LEN311<br>I9</td><td></td></tr>
+      <tr><td>12:15</td><td>13:00</td><td rowspan="2">EMP210<br>I9</td><td></td><td></td><td rowspan="2">EMP210<br>I9</td><td></td><td></td></tr>
       <tr><td>13:00</td><td>13:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>13:45</td><td>14:30</td><td rowspan="2">LEN311 I7</td><td></td><td><td></td></td><td rowspan="2">LEN312 I7</td><td></td><td></td><td><td rowspan="2">LEN311 I7</td></tr>
-      <tr><td>14:30</td><td>15:15</td><td></td><td rowspan="2">MAT310 I7</td><td></td><td></td><td rowspan="2">MAT310 I7</td><td></td><td></td></tr>
-      <tr><td>15:15</td><td>16:00</td><td></td><td></td><td></td><td rowspan="2">LEN311 I7</td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>16:00</td><td>16:45</td><td></td><td></td><td rowspan="3">HAR111 I7</td><td></td><td></td><td rowspan="3">HAR111 I7</td><td></td><td></td><td></td></tr>
+      <tr><td>13:45</td><td>14:30</td><td rowspan="2">LEN311<br>I7</td><td></td><td></td><td></td><td rowspan="2">LEN312<br>I7</td><td></td><td></td><td></td><td rowspan="2">LEN311<br>I7</td></tr>
+      <tr><td>14:30</td><td>15:15</td><td></td><td rowspan="2">MAT310<br>I7</td><td></td><td></td><td rowspan="2">MAT310<br>I7</td><td></td><td></td></tr>
+      <tr><td>15:15</td><td>16:00</td><td></td><td></td><td></td><td rowspan="2">LEN311<br>I7</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>16:00</td><td>16:45</td><td></td><td></td><td rowspan="3">HAR111<br>I7</td><td></td><td></td><td rowspan="3">HAR111<br>I7</td><td></td><td></td><td></td></tr>
       <tr><td>16:45</td><td>17:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>17:30</td><td>18:15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>18:15</td><td>19:00</td><td rowspan="2">MAT310 I8</td><td></td><td rowspan="2">EMP210 OF</td><td></td><td rowspan="2">MAT310 I8</td><td></td><td></td><td rowspan="2">LEN312 I8</td><td></td><td></td></tr>
+      <tr><td>18:15</td><td>19:00</td><td rowspan="2">MAT310<br>I8</td><td></td><td rowspan="2">EMP210<br>OF</td><td></td><td rowspan="2">MAT310<br>I8</td><td></td><td></td><td rowspan="2">LEN312<br>I8</td><td></td><td></td></tr>
       <tr><td>19:00</td><td>19:45</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>19:45</td><td>20:30</td><td rowspan="2">LEN311 I8</td><td rowspan="3">HAR111 I8</td><td></td><td rowspan="2">LEN311 I8</td><td></td><td></td><td rowspan="3">HAR111 I8</td><td></td><td></td><td></td></tr>
+      <tr><td>19:45</td><td>20:30</td><td rowspan="2">LEN311<br>I8</td><td rowspan="3">HAR111<br>I8</td><td></td><td rowspan="2">LEN311<br>I8</td><td></td><td></td><td rowspan="3">HAR111<br>I8</td><td></td><td></td><td></td></tr>
       <tr><td>20:30</td><td>21:15</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>21:15</td><td>22:00</td><td rowspan="2">LEN312 I8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>21:15</td><td>22:00</td><td rowspan="2">LEN312<br>I8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>22:00</td><td>22:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       
     </tbody>
   </table>
+  </div>
 </div>
 </div>
       <div class="tab-pane">
@@ -562,24 +565,24 @@
        </thead>
     <tbody>
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
-      <tr><td>07:00</td><td>07:45</td><td rowspan="3">MAT311-OF</td><td rowspan="3">OFI122-I7</td><td rowspan="3">OFI111-OF</td><td></td><td rowspan="6">OFI123-I9</td><td rowspan="7">OFI123-OF</td><td rowspan="3">OFI111-OF</td><td></td><td rowspan="3">MAT311-OF</td><td rowspan="2">OFI123-I9</td><td></td></tr>
-      <tr><td>07:45</td><td>08:30</td><td></td><td></td><td></tr>
-      <tr><td>08:30</td><td>09:15</td><td></td><td></td><td></td><td  rowspan="3">OFI111-I7</td></tr>
-      <tr><td>09:15</td><td>10:00</td><td rowspan="2">LEN324-OF</td><td rowspan="4">OFI111-I7</td><td rowspan="2">OFI111-I6</td><td></td><td></td><td rowspan="2">OFI111-I6</td><td rowspan="2">LEN323-OF</td><td></td></tr>
+      <tr><td>07:00</td><td>07:45</td><td rowspan="3">MAT311<br>OF</td><td rowspan="3">OFI122<br>I7</td><td rowspan="3">OFI111<br>OF</td><td></td><td rowspan="6">OFI123<br>I9</td><td rowspan="7">OFI123<br>OF</td><td rowspan="3">OFI111<br>OF</td><td></td><td rowspan="3">MAT311<br>OF</td><td rowspan="2">OFI123<br>I9</td><td></td></tr>
+      <tr><td>07:45</td><td>08:30</td><td></td><td></td><td></td><td  rowspan="3">OFI111<br>I7</td></tr>
+      <tr><td>08:30</td><td>09:15</td><td></td><td></td><td></td><td  rowspan="3">OFI111<br>I7</td></tr>
+      <tr><td>09:15</td><td>10:00</td><td rowspan="2">LEN324<br>OF</td><td rowspan="4">OFI111<br>I7</td><td rowspan="2">OFI111<br>I6</td><td></td><td></td><td rowspan="2">OFI111<br>I6</td><td rowspan="2">LEN323<br>OF</td><td></td></tr>
       <tr><td>10:00</td><td>10:45</td><td></td><td></td><td></td></tr>
-      <tr><td>10:45</td><td>11:30</td><td rowspan="2">LEN323-OF</td><td></td><td></td><td></td><td></td><td rowspan="3">OFI122-I7</td><td></td><td rowspan="2">LEN324-OF</td></tr>
-      <tr><td>11:30</td><td>12:15</td><td rowspan="2">OFI123-OF</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>10:45</td><td>11:30</td><td rowspan="2">LEN323<br>OF</td><td></td><td></td><td></td><td></td><td rowspan="3">OFI122<br>I7</td><td></td><td rowspan="2">LEN324<br>OF</td></tr>
+      <tr><td>11:30</td><td>12:15</td><td rowspan="2">OFI123<br>OF</td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>12:15</td><td>13:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>13:00</td><td>13:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>13:45</td><td>14:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>/tr>
       <tr><td>14:30</td><td>15:15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>15:15</td><td>16:00</td><td></td><td></td><td></td><td></td><td rowspan="2">LEN323-I7</td><td></td><td></td><td></td><td rowspan="2">LEN324-I6</td><td></td><td></td></tr>
-      <tr><td>16:00</td><td>16:45</td><td rowspan="2">MAT311-I7</td><td></td><td rowspan="3">OFI122-I8</td><td></td><td></td><td rowspan="3">OFI122-I8</td><td></td><td></td><td></td></tr>
-      <tr><td>16:45</td><td>17:30</td><td rowspan="2">LEN324-I6</td><td></td><td rowspan="3">OFI111-I8</td><td></td><td></td><td></td><td rowspan="2">LEN323-I7</td><td></td></tr>
-      <tr><td>17:30</td><td>18:15</td><td></td><td></td><td></td><td></td><td rowspan="2">MAT311-I7</td><td></td></tr>
-      <tr><td>18:15</td><td>19:00</td><td rowspan="2">OFI111-I8</td><td></td><td rowspan="6">OFI123-I8</td><td></td><td rowspan="2">LEN324-I9</td><td rowspan="2">MAT311-I7</td><td rowspan="3">OFI123-I8</td><td rowspan="2">LEN323-I8</td><td></td></tr>
+      <tr><td>15:15</td><td>16:00</td><td></td><td></td><td></td><td></td><td rowspan="2">LEN323<br>I7</td><td></td><td></td><td></td><td rowspan="2">LEN324<br>I6</td><td></td><td></td></tr>
+      <tr><td>16:00</td><td>16:45</td><td rowspan="2">MAT311<br>I7</td><td></td><td rowspan="3">OFI122<br>I8</td><td></td><td></td><td rowspan="3">OFI122<br>I8</td><td></td><td></td><td></td></tr>
+      <tr><td>16:45</td><td>17:30</td><td rowspan="2">LEN324<br>I6</td><td></td><td rowspan="3">OFI111<br>I8</td><td></td><td></td><td></td><td rowspan="2">LEN323<br>I7</td><td></td></tr>
+      <tr><td>17:30</td><td>18:15</td><td></td><td></td><td></td><td></td><td rowspan="2">MAT311<br>I7</td><td></td></tr>
+      <tr><td>18:15</td><td>19:00</td><td rowspan="2">OFI111<br>I8</td><td></td><td rowspan="6">OFI123<br>I8</td><td></td><td rowspan="2">LEN324<br>I9</td><td rowspan="2">MAT311<br>I7</td><td rowspan="3">OFI123<br>I8</td><td rowspan="2">LEN323<br>I8</td><td></td></tr>
       <tr><td>19:00</td><td>19:45</td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>19:45</td><td>20:30</td><td rowspan="2">LEN324-I9</td><td rowspan="3">MAT311-I8</td><td rowspan="2">LEN323-I8</td><td></td><td></td><td></td><td rowspan="3">MAT311-I8</td><td></td><td></td></tr>
+      <tr><td>19:45</td><td>20:30</td><td rowspan="2">LEN324<br>I9</td><td rowspan="3">MAT311<br>I8</td><td rowspan="2">LEN323<br>I8</td><td></td><td></td><td></td><td rowspan="3">MAT311<br>I8</td><td></td><td></td></tr>
       <tr><td>20:30</td><td>21:15</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>21:15</td><td>22:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>22:00</td><td>22:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -753,25 +756,25 @@
        </thead>
     <tbody>
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
-      <tr><td>07:00</td><td>07:45</td><td></td><td></td><td></td><td></td><td></td><td rowspan="6">OFI134-OF</td><td></td><td></td><td></td><td></td><td rowspan="5">EMP221-I7</td><td rowspan="4">LEN335-I8</td></tr>
+      <tr><td>07:00</td><td>07:45</td><td></td><td></td><td></td><td></td><td></td><td rowspan="6">OFI134<br>OF</td><td></td><td></td><td></td><td></td><td rowspan="5">EMP221<br>I7</td><td rowspan="4">LEN335<br>I8</td></tr>
       <tr><td>07:45</td><td>08:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>08:30</td><td>09:15</td><td></td><td></td><td rowspan="2">INF132-OF</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>09:15</td><td>10:00</td><td></td><td></td><td></td><td></td><td rowspan="2">INF132-OF</td><td><td></td></td><td></tr>
+      <tr><td>08:30</td><td>09:15</td><td></td><td></td><td rowspan="2">INF132<br>OF</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>09:15</td><td>10:00</td><td></td><td></td><td></td><td></td><td rowspan="2">INF132<br>OF</td><td><td></td></td><td></tr>
       <tr><td>10:00</td><td>10:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>10:45</td><td>11:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>11:30</td><td>12:15</td><td rowspan="2">INF121-I8</td><td></td><td rowspan="2">MAT312-OF</td><td></td><td></td><td></td><td rowspan="2">INF121-I8</td><td rowspan="2">MAT312-OF</td><td></td><td rowspan="2">INF121-I8</td><td></td><td></td></tr>
-      <tr><td>12:15</td><td>13:00</td><td></td><td></td><td></td><td rowspan="3">INF121-I7</td><td></td><td></td><td></td></tr>
+      <tr><td>11:30</td><td>12:15</td><td rowspan="2">INF121<br>I8</td><td></td><td rowspan="2">MAT312<br>OF</td><td></td><td></td><td></td><td rowspan="2">INF121<br>I8</td><td rowspan="2">MAT312<br>OF</td><td></td><td rowspan="2">INF121<br>I8</td><td></td><td></td></tr>
+      <tr><td>12:15</td><td>13:00</td><td></td><td></td><td></td><td rowspan="3">INF121<br>I7</td><td></td><td></td><td></td></tr>
       <tr><td>13:00</td><td>13:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>13:45</td><td>14:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>14:30</td><td>15:15</td><td rowspan="2">LEN335-OF</td><td></td><td></td><td></td><td></td><td rowspan="2">LEN335-OF</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>14:30</td><td>15:15</td><td rowspan="2">LEN335<br>OF</td><td></td><td></td><td></td><td></td><td rowspan="2">LEN335<br>OF</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>15:15</td><td>16:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>16:00</td><td>16:45</td><td></td><td></td><td rowspan="3">MAT323-I7</td><td></td><td></td><td></td><td rowspan="3">MAT323-I7</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>16:00</td><td>16:45</td><td></td><td></td><td rowspan="3">MAT323<br>I7</td><td></td><td></td><td></td><td rowspan="3">MAT323<br>I7</td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>16:45</td><td>17:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>17:30</td><td>18:15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>18:15</td><td>19:00</td><td rowspan="2">EMP221-I8</td><td></td><td rowspan="3">INF121-I6</td><td rowspan="4">INF132-I9</td><td rowspan="3">MAT323-I8</td><td></td><td rowspan="3">INF121-I6</td><td rowspan="2">INF132-I9</td><td rowspan="3">MAT323-I8</td><td rowspan="2">EMP221-I8</td><td></td><td></td></tr>
-      <tr><td>19:00</td><td>19:45</td><td rowspan="3">INF121-I7</td><td rowspan="5">OFI134-I8</td><td></td><td></td></tr>
+      <tr><td>18:15</td><td>19:00</td><td rowspan="2">EMP221<br>I8</td><td></td><td rowspan="3">INF121<br>I6</td><td rowspan="4">INF132<br>I9</td><td rowspan="3">MAT323<br>I8</td><td></td><td rowspan="3">INF121<br>I6</td><td rowspan="2">INF132<br>I9</td><td rowspan="3">MAT323<br>I8</td><td rowspan="2">EMP221<br>I8</td><td></td><td></td></tr>
+      <tr><td>19:00</td><td>19:45</td><td rowspan="3">INF121<br>I7</td><td rowspan="5">OFI134<br>I8</td><td></td><td></td></tr>
       <tr><td>19:45</td><td>20:30</td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>20:30</td><td>21:15</td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan="3">OFI134-I8</td><td></td><td></td></tr>
+      <tr><td>20:30</td><td>21:15</td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan="3">OFI134<br>I8</td><td></td><td></td></tr>
       <tr><td>21:15</td><td>22:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       <tr><td>22:00</td><td>22:45</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       
@@ -978,25 +981,25 @@
        </thead>
     <tbody>
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
-      <tr>	<td>	07:00	</td><td>	07:45	</td>	<td rowspan="2">INF144-OF</td>	<td rowspan="3">INF165-OF</td>	<td></td>	<td rowspan="3">INF165-OF</td>	<td></td>	<td></td>
+      <tr>	<td>	07:00	</td><td>	07:45	</td>	<td rowspan="2">INF144<br>OF</td>	<td rowspan="3">INF165<br>OF</td>	<td></td>	<td rowspan="3">INF165<br>OF</td>	<td></td>	<td></td>
 <tr>	<td>	07:45	</td><td>	08:30	</td>			<td></td>		<td></td>	<td></td>
 <tr>	<td>	08:30	</td><td>	09:15	</td>			<td></td>		<td></td>	<td></td><td></td>
-<tr>	<td>	09:15	</td><td>	10:00	</td>		<td rowspan="3">EMP234-OF</td>	<td rowspan="2">OF-INF144</td>	<td></td>	<td></td>	<td></td><td></td>
-<tr>	<td>	10:00	</td><td>	10:45	</td>			<td rowspan="2">OF-INF144</td>	<td rowspan="2">EMP234-OF</td>	<td></td>	<td></td>
+<tr>	<td>	09:15	</td><td>	10:00	</td>		<td rowspan="3">EMP234<br>OF</td>	<td rowspan="2">OF-INF144</td>	<td></td>	<td></td>	<td></td><td></td>
+<tr>	<td>	10:00	</td><td>	10:45	</td>			<td rowspan="2">INF144<br>OF</td>	<td rowspan="2">EMP234<br>OF</td>	<td></td>	<td></td>
 <tr>	<td>	10:45	</td><td>	11:30	</td>			<td></td>		<td></td>	<td></td>
 <tr>	<td>	11:30	</td><td>	12:15	</td>		<td></td>	<td></td>	<td></td>	<td></td>	<td></td><td></td>
 <tr>	<td>	12:15	</td><td>	13:00	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>
 <tr>	<td>	13:00	</td><td>	13:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>
-<tr>	<td>	13:45	</td><td>	14:30	</td>	<td rowspan="3">HAR143-OF</td>	<td rowspan="3">HAR142-I7</td>	<td rowspan="3">HAR143-OF</td>	<td rowspan="3">HAR142-I7</td>	<td></td>	<td></td>
+<tr>	<td>	13:45	</td><td>	14:30	</td>	<td rowspan="3">HAR143<br>OF</td>	<td rowspan="3">HAR142<br>I7</td>	<td rowspan="3">HAR143<br>OF</td>	<td rowspan="3">HAR142<br>I7</td>	<td></td>	<td></td>
 <tr>	<td>	14:30	</td><td>	15:15	</td>					<td></td>	<td></td>
 <tr>	<td>	15:15	</td><td>	16:00	</td>					<td></td>	<td></td>
-<tr>	<td>	16:00	</td><td>	16:45	</td>	<td rowspan="3">EMP234-I7</td>	<td rowspan="3">HAR155-I7</td>	<td></td>	<td rowspan="3">HAR155-I7</td>	<td></td>	<td></td>
-<tr>	<td>	16:45	</td><td>	17:30	</td>			<td rowspan="3">EMP234-I7</td>		<td></td>	<td></td>
+<tr>	<td>	16:00	</td><td>	16:45	</td>	<td rowspan="3">EMP234<br>I7</td>	<td rowspan="3">HAR155<br>I7</td>	<td></td>	<td rowspan="3">HAR155<br>I7</td>	<td></td>	<td></td>
+<tr>	<td>	16:45	</td><td>	17:30	</td>			<td rowspan="3">EMP234<br>I7</td>		<td></td>	<td></td>
 <tr>	<td>	17:30	</td><td>	18:15	</td>					<td></td>	<td></td>
-<tr>	<td>	18:15	</td><td>	19:00	</td>	<td rowspan="6">HAR155-I8</td>	<td></td>		<td rowspan="6">HAR142-I8</td>	<td rowspan="2">EMP234-I8</td>	<td></td>
-<tr>	<td>	19:00	</td><td>	19:45	</td>		<td rowspan="2">OFI145-I8</td>	<td></td>			<td></td>
-<tr>	<td>	19:45	</td><td>	20:30	</td>			<td></td>		<td rowspan="4">OFI145-I8</td>	<td></td>
-<tr>	<td>	20:30	</td><td>	21:15	</td>			<td rowspan="3">EMP234-I8</td><td></td><td></td>			
+<tr>	<td>	18:15	</td><td>	19:00	</td>	<td rowspan="6">HAR155<br>I8</td>	<td></td>		<td rowspan="6">HAR142<br>I8</td>	<td rowspan="2">EMP234<br>I8</td>	<td></td>
+<tr>	<td>	19:00	</td><td>	19:45	</td>		<td rowspan="2">OFI145<br>I8</td>	<td></td>			<td></td>
+<tr>	<td>	19:45	</td><td>	20:30	</td>			<td></td>		<td rowspan="4">OFI145<br>I8</td>	<td></td>
+<tr>	<td>	20:30	</td><td>	21:15	</td>			<td rowspan="3">EMP234<br>I8</td><td></td><td></td>			
 <tr>	<td>	21:15	</td><td>	22:00	</td>			<td></td>			<td></td>
 <tr>	<td>	22:00	</td><td>	22:45	</td>			<td></td>			<td></td>
 
@@ -1164,22 +1167,22 @@
        </thead>
     <tbody>
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
-<tr>	<td>	07:00	</td><td>	07:45	</td>	<td rowspan="3">HAR154-OF</td>	<td></td>	<td></td>	<td rowspan="4">INF143-I7</td>	<td></td>	<td rowspan="3">HAR154-OF</td>	<td></td>	</tr>
+<tr>	<td>	07:00	</td><td>	07:45	</td>	<td rowspan="3">HAR154<br>OF</td>	<td></td>	<td></td>	<td rowspan="4">INF143<br>I7</td>	<td></td>	<td rowspan="3">HAR154<br>OF</td>	<td></td>	</tr>
 <tr>	<td>	07:45	</td><td>	08:30	</td>		<td></td>	<td></td>		<td></td>		<td></td>	</tr>
 <tr>	<td>	08:30	</td><td>	09:15	</td>		<td></td>	<td></td>		<td></td>		<td></td>	</tr>
-<tr>	<td>	09:15	</td><td>	10:00	</td>	<td rowspan="3">HAR156-I8</td>	<td></td>	<td></td>		<td></td>	<td rowspan="5">EMP257-I9</td>	<td></td>	</tr>
-<tr>	<td>	10:00	</td><td>	10:45	</td>		<td></td>	<td rowspan="3">HAR156-I8</td>	<td></td>	<td></td>		<td></td>	</tr>
+<tr>	<td>	09:15	</td><td>	10:00	</td>	<td rowspan="3">HAR156<br>I8</td>	<td></td>	<td></td>		<td></td>	<td rowspan="5">EMP257<br>I9</td>	<td></td>	</tr>
+<tr>	<td>	10:00	</td><td>	10:45	</td>		<td></td>	<td rowspan="3">HAR156<br>I8</td>	<td></td>	<td></td>		<td></td>	</tr>
 <tr>	<td>	10:45	</td><td>	11:30	</td>		<td></td>		<td></td>	<td></td>		<td></td>	</tr>
 <tr>	<td>	11:30	</td><td>	12:15	</td>	<td></td>	<td></td>		<td></td>	<td></td>		<td></td>	</tr>
-<tr>	<td>	12:15	</td><td>	13:00	</td>	<td></td>	<td></td>	<td rowspan="3">HAR156-OF</td>	<td></td>	<td rowspan="3">HAR156-OF</td>		<td></td>	</tr>
+<tr>	<td>	12:15	</td><td>	13:00	</td>	<td></td>	<td></td>	<td rowspan="3">HAR156<br>OF</td>	<td></td>	<td rowspan="3">HAR156<br>OF</td>		<td></td>	</tr>
 <tr>	<td>	13:00	</td><td>	13:45	</td>	<td></td>	<td></td>		<td></td>		<td></td>	<td></td>	</tr>
 <tr>	<td>	13:45	</td><td>	14:30	</td>	<td></td>	<td></td>		<td></td>		<td></td>	<td></td>	</tr>
 <tr>	<td>	14:30	</td><td>	15:15	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	15:15	</td><td>	16:00	</td>	<td rowspan="2">EMP233-I7</td>	<td></td>	<td></td>	<td rowspan="3">EMP233-I7</td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	16:00	</td><td>	16:45	</td>		<td></td>	<td></td>		<td rowspan="2">HAR157-OF</td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	16:45	</td><td>	17:30	</td>	<td rowspan="2">INF143-I7</td>	<td></td>	<td></td>			<td></td>	<td></td>	</tr>
+<tr>	<td>	15:15	</td><td>	16:00	</td>	<td rowspan="2">EMP233<br>I7</td>	<td></td>	<td></td>	<td rowspan="3">EMP233<br>I7</td>	<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	16:00	</td><td>	16:45	</td>		<td></td>	<td></td>		<td rowspan="2">HAR157<br>OF</td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	16:45	</td><td>	17:30	</td>	<td rowspan="2">INF143<br>I7</td>	<td></td>	<td></td>			<td></td>	<td></td>	</tr>
 <tr>	<td>	17:30	</td><td>	18:15	</td>		<td></td>	<td></td>	<td></td>		<td></td>	<td></td><td></td>	</tr>
-<tr>	<td>	18:15	</td><td>	19:00	</td>	<td rowspan="6">EMP233-OF</td>	<td rowspan="3">HAR154-I8</td>	<td rowspan="6">HAR157-OF</td>	<td></td>	<td></td>	<td rowspan="3">HAR154-I8</td>	<td></td>	</tr>
+<tr>	<td>	18:15	</td><td>	19:00	</td>	<td rowspan="6">EMP233<br>OF</td>	<td rowspan="3">HAR154<br>I8</td>	<td rowspan="6">HAR157<br>OF</td>	<td></td>	<td></td>	<td rowspan="3">HAR154<br>I8</td>	<td></td>	</tr>
 <tr>	<td>	19:00	</td><td>	19:45	</td>				<td></td>	<td></td>		<td></td>	</tr>
 <tr>	<td>	19:45	</td><td>	20:30	</td>				<td></td>	<td></td>		<td></td>	</tr>
 <tr>	<td>	20:30	</td><td>	21:15	</td>		<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	</tr>
@@ -1373,25 +1376,25 @@
     <tbody>
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
 
-<tr>	<td>	07:00	</td><td>	07:45	</td>		<td rowspan="3">EMP245-OF</td>	<td></td>	<td></td>	<td rowspan="2">EMP245-OF</td>	<td></td>	<td rowspan="3">SOF141-OF</td>	<td></td><td></td></tr>
+<tr>	<td>	07:00	</td><td>	07:45	</td>		<td rowspan="3">EMP245<br>OF</td>	<td></td>	<td></td>	<td rowspan="2">EMP245<br>OF</td>	<td></td>	<td rowspan="3">SOF141<br>OF</td>	<td></td><td></td></tr>
 <tr>	<td>	07:45	</td><td>	08:30	</td>			<td></td>	<td></td>		<td></td>		<td></td><td></td></tr>
-<tr>	<td>	08:30	</td><td>	09:15	</td>			<td></td>	<td></td>	<td rowspan="3">INF166-OF</td>	<td></td>		<td rowspan="3">EMP245-I8</td><td></td> </tr>
-<tr>	<td>	09:15	</td><td>	10:00	</td>	<td rowspan="4">INF166-OF</td>	<td></td>	<td></td>	<td></td>		<td></td>	<td></td>		</tr>
+<tr>	<td>	08:30	</td><td>	09:15	</td>			<td></td>	<td></td>	<td rowspan="3">INF166<br>OF</td>	<td></td>		<td rowspan="3">EMP245<br>I8</td><td></td> </tr>
+<tr>	<td>	09:15	</td><td>	10:00	</td>	<td rowspan="4">INF166<br>OF</td>	<td></td>	<td></td>	<td></td>		<td></td>	<td></td>		</tr>
 <tr>	<td>	10:00	</td><td>	10:45	</td>		<td></td>	<td></td>	<td></td>		<td></td>	<td></td>		</tr>
-<tr>	<td>	10:45	</td><td>	11:30	</td>		<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td rowspan="9">SOF166-OF</td>	</tr>
+<tr>	<td>	10:45	</td><td>	11:30	</td>		<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td rowspan="9">SOF166<br>OF</td>	</tr>
 <tr>	<td>	11:30	</td><td>	12:15	</td>		<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
-<tr>	<td>	12:15	</td><td>	13:00	</td>	<td rowspan="2">SOF141-OF</td>	<td rowspan="2">SOF141-OF</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
+<tr>	<td>	12:15	</td><td>	13:00	</td>	<td rowspan="2">SOF141<br>OF</td>	<td rowspan="2">SOF141<br>OF</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
 <tr>	<td>	13:00	</td><td>	13:45	</td>			<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
-<tr>	<td>	13:45	</td><td>	14:30	</td>	<td></td>	<td rowspan="3">SOF164-OF</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
-<tr>	<td>	14:30	</td><td>	15:15	</td>	<td></td>		<td rowspan="3">SOF166-I7</td>	<td></td>	<td rowspan="2">SOF164-OF</td>	<td rowspan="3">SOF166-I7</td>	<td rowspan="3">SOF166-I7</td>		</tr>
+<tr>	<td>	13:45	</td><td>	14:30	</td>	<td></td>	<td rowspan="3">SOF164<br>OF</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
+<tr>	<td>	14:30	</td><td>	15:15	</td>	<td></td>		<td rowspan="3">SOF166<br>I7</td>	<td></td>	<td rowspan="2">SOF164<br>OF</td>	<td rowspan="3">SOF166<br>I7</td>	<td rowspan="3">SOF166<br>I7</td>		</tr>
 <tr>	<td>	15:15	</td><td>	16:00	</td>	<td></td>			<td></td>					</tr>
 <tr>	<td>	16:00	</td><td>	16:45	</td>	<td></td>	<td></td>		<td></td>	<td></td>				</tr>
 <tr>	<td>	16:45	</td><td>	17:30	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		</tr>
 <tr>	<td>	17:30	</td><td>	18:15	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	18:15	</td><td>	19:00	</td>	<td rowspan="2">SOF164-I8</td>	<td></td>	<td></td>	<td rowspan="3">SOF164-I8</td>	<td></td>	<td></td>	<td rowspan="3">MAT354-I8</td>	<td></td>	</tr>
+<tr>	<td>	18:15	</td><td>	19:00	</td>	<td rowspan="2">SOF164<br>I8</td>	<td></td>	<td></td>	<td rowspan="3">SOF164<br>I8</td>	<td></td>	<td></td>	<td rowspan="3">MAT354<br>I8</td>	<td></td>	</tr>
 <tr>	<td>	19:00	</td><td>	19:45	</td>		<td></td>	<td></td>		<td></td>	<td></td>		<td></td>	</tr>
-<tr>	<td>	19:45	</td><td>	20:30	</td>	<td rowspan="2">EMP245-I8</td>	<td></td>	<td></td>		<td></td>	<td></td>		<td></td>	</tr>
-<tr>	<td>	20:30	</td><td>	21:15	</td>		<td rowspan="3">MAT354-I8</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	19:45	</td><td>	20:30	</td>	<td rowspan="2">EMP245<br>I8</td>	<td></td>	<td></td>		<td></td>	<td></td>		<td></td>	</tr>
+<tr>	<td>	20:30	</td><td>	21:15	</td>		<td rowspan="3">MAT354<br>I8</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	21:15	</td><td>	22:00	</td>	<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	22:00	</td><td>	22:45	</td>	<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 
@@ -1549,23 +1552,23 @@
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
 <tr>	<td>	07:00	</td><td>	07:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	07:45	</td><td>	08:30	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	08:30	</td><td>	09:15	</td>	<td></td>	<td rowspan="4">EMP278-OF</td>	<td></td>	<td rowspan="5">EMP278-OF</td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	08:30	</td><td>	09:15	</td>	<td></td>	<td rowspan="4">EMP278<br>OF</td>	<td></td>	<td rowspan="5">EMP278<br>OF</td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	09:15	</td><td>	10:00	</td>	<td></td>		<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	10:00	</td><td>	10:45	</td>	<td></td>		<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	10:45	</td><td>	11:30	</td>	<td></td>		<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	11:30	</td><td>	12:15	</td>	<td></td>	<td></td>	<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	12:15	</td><td>	13:00	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	13:00	</td><td>	13:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td rowspan="3">HAR178-I8</td>	<td></td>	</tr>
+<tr>	<td>	13:00	</td><td>	13:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td rowspan="3">HAR178<br>I8</td>	<td></td>	</tr>
 <tr>	<td>	13:45	</td><td>	14:30	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		<td></td>	</tr>
 <tr>	<td>	14:30	</td><td>	15:15	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>		<td></td>	</tr>
 <tr>	<td>	15:15	</td><td>	16:00	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	16:00	</td><td>	16:45	</td>	<td></td>	<td rowspan="3">SOF163-I8</td>	<td></td>	<td></td>	<td rowspan="3">SOF163-I8</td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	16:45	</td><td>	17:30	</td>	<td rowspan="2">EMP279-I8</td>		<td></td>	<td rowspan="3">EMP279-I8</td>		<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	16:00	</td><td>	16:45	</td>	<td></td>	<td rowspan="3">SOF163<br>I8</td>	<td></td>	<td></td>	<td rowspan="3">SOF163<br>I8</td>	<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	16:45	</td><td>	17:30	</td>	<td rowspan="2">EMP279<br>I8</td>		<td></td>	<td rowspan="3">EMP279<br>I8</td>		<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	17:30	</td><td>	18:15	</td>			<td></td>			<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	18:15	</td><td>	19:00	</td>	<td></td>	<td rowspan="5">EMP278-OF</td>	<td rowspan="2">MAT375-I7</td>		<td></td>	<td rowspan="3">MAT375-I7</td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	18:15	</td><td>	19:00	</td>	<td></td>	<td rowspan="5">EMP278<br>OF</td>	<td rowspan="2">MAT375<br>I7</td>		<td></td>	<td rowspan="3">MAT375<br>I7</td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	19:00	</td><td>	19:45	</td>	<td></td>			<td></td>	<td></td>		<td></td>	<td></td>	</tr>
-<tr>	<td>	19:45	</td><td>	20:30	</td>	<td></td>		<td></td>	<td></td>	<td rowspan="3">EMP266-I8</td>		<td></td>	<td></td>	</tr>
-<tr>	<td>	20:30	</td><td>	21:15	</td>	<td rowspan="2">EMP266-I8</td>		<td></td>	<td rowspan="3">HAR178-I8</td>		<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	19:45	</td><td>	20:30	</td>	<td></td>		<td></td>	<td></td>	<td rowspan="3">EMP266<br>I8</td>		<td></td>	<td></td>	</tr>
+<tr>	<td>	20:30	</td><td>	21:15	</td>	<td rowspan="2">EMP266<br>I8</td>		<td></td>	<td rowspan="3">HAR178<br>I8</td>		<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	21:15	</td><td>	22:00	</td>			<td></td>			<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	22:00	</td><td>	22:45	</td>	<td></td>	<td></td>	<td></td>		<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 
@@ -1714,25 +1717,25 @@
        </thead>
     <tbody>
       <!-- Cada fila de 45min desde 07:00 hasta 22:45 -->
-<tr>	<td>	07:00	</td><td>	07:45	</td>	<td></td>	<td rowspan="2">OFI186-I8</td>	<td rowspan="3">SOF188-I8</td>	<td rowspan="4">SOF188-I8</td>	<td rowspan="4">SOF188-I8</td>	<td></td>	</tr>
+<tr>	<td>	07:00	</td><td>	07:45	</td>	<td></td>	<td rowspan="2">OFI186<br>I8</td>	<td rowspan="3">SOF188<br>I8</td>	<td rowspan="4">SOF188<br>I8</td>	<td rowspan="4">SOF188<br>I8</td>	<td></td>	</tr>
 <tr>	<td>	07:45	</td><td>	08:30	</td>	<td></td>					<td></td>	</tr>
 <tr>	<td>	08:30	</td><td>	09:15	</td>	<td></td>	<td></td>				<td></td>	</tr>
 <tr>	<td>	09:15	</td><td>	10:00	</td>	<td></td>	<td></td>	<td></td>			<td></td>	</tr>
 <tr>	<td>	10:00	</td><td>	10:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	10:45	</td><td>	11:30	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	11:30	</td><td>	12:15	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	12:15	</td><td>	13:00	</td>	<td></td>	<td></td>	<td rowspan="2">SOF187-I8</td>	<td rowspan="3">SOF187-I8</td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	12:15	</td><td>	13:00	</td>	<td></td>	<td></td>	<td rowspan="2">SOF187<br>I8</td>	<td rowspan="3">SOF187<br>I8</td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	13:00	</td><td>	13:45	</td>	<td></td>	<td></td>			<td></td>	<td></td>	</tr>
 <tr>	<td>	13:45	</td><td>	14:30	</td>	<td></td>	<td></td>	<td></td>		<td></td>	<td></td>	</tr>
 <tr>	<td>	14:30	</td><td>	15:15	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	15:15	</td><td>	16:00	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	16:00	</td><td>	16:45	</td>	<td rowspan="3">INF187-I8</td>	<td></td>	<td></td>	<td rowspan="3">INF187-I8</td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	16:45	</td><td>	17:30	</td>		<td></td>	<td rowspan="2">INF187-I8</td>		<td></td>	<td></td>	</tr>
+<tr>	<td>	16:00	</td><td>	16:45	</td>	<td rowspan="3">INF187<br>I8</td>	<td></td>	<td></td>	<td rowspan="3">INF187<br>I8</td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	16:45	</td><td>	17:30	</td>		<td></td>	<td rowspan="2">INF187<br>I8</td>		<td></td>	<td></td>	</tr>
 <tr>	<td>	17:30	</td><td>	18:15	</td>		<td></td>			<td></td>	<td></td>	</tr>
 <tr>	<td>	18:15	</td><td>	19:00	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	19:00	</td><td>	19:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	19:45	</td><td>	20:30	</td>	<td rowspan="3">SOF152-I8</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
-<tr>	<td>	20:30	</td><td>	21:15	</td>		<td></td>	<td rowspan="2">SOF152-I8</td>	<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	19:45	</td><td>	20:30	</td>	<td rowspan="3">SOF152<br>I8</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
+<tr>	<td>	20:30	</td><td>	21:15	</td>		<td></td>	<td rowspan="2">SOF152<br>I8</td>	<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	21:15	</td><td>	22:00	</td>		<td></td>		<td></td>	<td></td>	<td></td>	</tr>
 <tr>	<td>	22:00	</td><td>	22:45	</td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	</tr>
 
@@ -1743,6 +1746,8 @@
 
   </div>
 </div>
+<button id="toggleAuxBtn" class="aux-btn-mobile">Auxiliaturas</button>
+
   <script>
     function toggleSidebar() {
       document.getElementById("sidebar").classList.toggle("collapsed");
@@ -1777,6 +1782,67 @@ function toggleDetalle(item) {
   }
 }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("toggleAuxBtn");
+  const auxBar = document.getElementById("auxBar");
+
+  btn.addEventListener("click", () => {
+    auxBar.classList.toggle("visible");
+  });
+});
+</script>
+
+<script>
+function convertirTodasLasTablas() {
+  // Solo aplica en pantallas pequeñas (vista móvil)
+  if (window.innerWidth > 768) return;
+
+  document.querySelectorAll('.tabla-detalles').forEach(tabla => {
+    const filas = [...tabla.rows];
+    const categorias = filas.map(fila => fila.cells[0].innerText);
+    const columnas = filas[0].cells.length;
+
+    const contenedor = document.createElement('div');
+    contenedor.className = "tabla-detalle-transpuesta";
+    contenedor.style.padding = "0 10px"; // padding lateral para centrado visual
+
+    for (let col = 1; col < columnas; col++) {
+      const nuevaTabla = document.createElement('table');
+      nuevaTabla.className = 'mini-tabla';
+      const tbody = document.createElement('tbody');
+
+      for (let fila = 0; fila < filas.length; fila++) {
+        const tr = document.createElement('tr');
+        const th = document.createElement('th');
+        th.textContent = categorias[fila];
+        const td = document.createElement('td');
+        td.innerHTML = filas[fila].cells[col].innerHTML;
+        tr.appendChild(th);
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+      }
+
+      nuevaTabla.appendChild(tbody);
+      contenedor.appendChild(nuevaTabla);
+    }
+
+    // Reemplazar la tabla original por el contenedor transpuesto
+    tabla.parentNode.replaceChild(contenedor, tabla);
+  });
+}
+
+// Ejecutar cuando cargue el DOM
+document.addEventListener('DOMContentLoaded', convertirTodasLasTablas);
+
+// Opcional: volver a cargar si se cambia el tamaño de pantalla (ej. de escritorio a móvil)
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    location.reload(); // o puedes limpiar y volver a ejecutar convertirTodasLasTablas()
+  }
+});
+</script>
+
 
 </body>
 </html>

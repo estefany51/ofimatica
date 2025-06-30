@@ -6,28 +6,60 @@
   <title>Licenciatura en Ofimática</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .hero video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 1; /* detrás del contenido */
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+  </style>
 </head>
 <body>
-      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-  <aside class="sidebar" id="sidebar">
+
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <aside class="sidebar collapsed" id="sidebar">
     <nav class="menu">
       <a href="index.html"><i class="fas fa-home"></i><span class="text">Inicio</span></a>
-      <a href="malla.html"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
+      <a href="malla.php"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
       <a href="area.html"><i class="fas fa-layer-group"></i><span class="text">Áreas</span></a>
       <a href="perfil.html"><i class="fas fa-user-graduate"></i><span class="text">Perfil</span></a>
       <a href="modalidad.html"><i class="fas fa-sign-in-alt"></i><span class="text">Modalidad</span></a>
       <a href="beneficios.html"><i class="fas fa-coins"></i><span class="text">Beneficios</span></a>
-      <a href="contacto.html"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
+      <a href="material.php"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
     </nav>
   </aside>
 
-  <main class="main-content">
+  <main class="main-contenti">
     <section class="hero" id="bienvenida">
-  <video autoplay muted loop playsinline class="hero-video">
-  <source src="portada.mp4" type="video/mp4">
-  Tu navegador no soporta el video.
-</video>
-
+      <video autoplay muted loop playsinline>
+        <source src="portada.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
     </section>
   </main>
 
@@ -36,5 +68,6 @@
       document.getElementById("sidebar").classList.toggle("collapsed");
     }
   </script>
+
 </body>
 </html>

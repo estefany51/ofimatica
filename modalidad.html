@@ -6,20 +6,29 @@
   <title>Modalidades</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+    <style>
+     .main-contentos {
+    max-width: 1000px;
+    margin: 40px auto 50px auto;
+    padding: 20px;
+    display: block; /* quitar el flex */
+    min-height: auto; /* quitar altura fija */
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
   <canvas id="node-background"></canvas>
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-  <aside class="sidebar" id="sidebar">
+<aside class="sidebar collapsed" id="sidebar">
     <nav class="menu">
       <a href="index.html"><i class="fas fa-home"></i><span class="text">Inicio</span></a>
-      <a href="malla.html"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
+      <a href="malla.php"><i class="fas fa-table-list"></i><span class="text">Malla</span></a>
       <a href="area.html"><i class="fas fa-layer-group"></i><span class="text">Áreas</span></a>
       <a href="perfil.html"><i class="fas fa-user-graduate"></i><span class="text">Perfil</span></a>
       <a href="modalidad.html"><i class="fas fa-sign-in-alt"></i><span class="text">Modalidad</span></a>
       <a href="beneficios.html"><i class="fas fa-coins"></i><span class="text">Beneficios</span></a>
-      <a href="contacto.html"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
+      <a href="material.php"><i class="fas fa-envelope"></i><span class="text">Contacto</span></a>
     </nav>
   </aside>
 
@@ -85,11 +94,11 @@
 
     <!-- Modalidad Egreso -->
      
-    <div id="egreso" class="tabe-content">
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-btn">Graduación por Excelencia Académica</button>
-          <div class="accordion-content">
+      <div id="egreso" class="tabe-content">
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-btn">Graduación por Excelencia Académica</button>
+            <div class="accordion-content">
            <p>Esta modalidad permite optar al título profesional sin la necesidad de realizar un trabajo final de grado. Para acceder a ella, el estudiante debe cumplir con los siguientes requisitos:</p>
 <ul>
   <li>Haber aprobado todas las materias del plan de estudios, excepto la correspondiente a la modalidad de graduación.</li>
@@ -117,7 +126,7 @@
             <p>Es una modalidad de titulación directa que puede ser aplicada sin tomar en cuenta el tiempo de permanencia del estudiante en la carrera, siempre que se cumplan los siguientes requisitos:</p>
 <ul>
   <li>Haber aprobado todas las materias del plan de estudios, excepto la correspondiente a la modalidad de graduación.</li>
-  <li>Haber reprobado una sola vez una misma asignatura durante toda la carrera.</li>
+  <li>No haber reprobado una sola vez una misma asignatura durante toda la carrera.</li>
   <li>Tener un promedio general igual o superior al establecido por la facultad, conforme a resolución emitida por el Consejo Directivo.</li>
 </ul>
           </div>
@@ -181,10 +190,190 @@
     <p>
       El proyecto debe estar sustentado en una investigación rigurosa y una correcta documentación, para asegurar la calidad y validez del trabajo realizado.
     </p>
-    <a href="proyecto_de_grado.pdf" download="proyecto_de_grado.pdf" class="download-link">Formato Proyecto de Grado</a>
 
+    <!-- Botones de popup dentro del contenido -->
+    <p>
+      <button onclick="mostrarPopup('condiciones')">📋 Ver Condiciones del Proyecto</button>
+      <button onclick="mostrarPopup('rechazo')">❌ Ver Motivos de Rechazo</button>
+      <button onclick="mostrarPopup('recomendacion')">Ver Recomendaciones</button>
+    </p>
+
+    <a href="proyecto_de_grado.pdf" download="proyecto_de_grado.pdf" class="download-link">Formato Proyecto de Grado</a>
   </div>
 </div>
+
+<!-- POPUPS FUERA del acordeón (para que no se limiten visualmente) -->
+<div id="popup-condiciones" class="popup">
+  <div class="popup-content">
+    <span class="cerrar" onclick="cerrarPopup('condiciones')">&times;</span>
+    <h3>Condiciones para Aceptar un Proyecto</h3>
+    <table>
+      <tr><th>Elemento obligatorio</th><th>Descripción</th></tr>
+      <tr><td>Título</td><td>Claro, específico y profesional</td></tr>
+      <tr><td>Justificación</td><td>	Explica por qué es importante hacer este proyecto</td></tr>
+      <tr><td>Planteamiento del problema</td><td>	Situación actual + problema detectado + necesidad</td></tr>
+      <tr><td>Objetivo general y específicos</td><td>	Qué se busca lograr y cómo se va a lograr</td></tr>
+      <tr><td>Metodología</td><td>	Tipo de investigación, técnicas, herramientas y etapas</td></tr>
+      <tr><td>Marco teórico	</td><td>Referencias bibliográficas y conceptos clave</td></tr>
+      <tr><td>Cronograma	</td><td>Plan de actividades en el tiempo</td></tr>
+      <tr><td>Recursos</td><td>	Humanos, técnicos, materiales y financieros</td></tr>
+      <tr><td>Resultados esperados</td><td>Lo que vas a obtener al finalizar el proyecto</td></tr>
+      <tr><td>Evaluación y sostenibilidad</td>	<td>Cómo se medirá el impacto, y si puede mantenerse en el tiempo</td></tr>
+        </table>
+        <h3>Condiciones técnicas</h3>
+        <ul>
+          <li>Debe incluir un prototipo, software, herramienta digital o solución funcional.</li>
+          <li>Debe tener impacto práctico en alguna área (educación, administración, automatización, etc.).</li>
+          <li>El desarrollo debe demostrar aplicación de conocimientos ofimáticos y tecnológicos.</li>
+        </ul>
+        <p></p>
+        <ul>
+          <li>El proyecto debe ser avalado por un docente tutor asignado en la materia GRL.</li>
+          <li>Debe ser presentado y aprobado en el marco del seminario de grado.</li>
+          <li>Debe seguir los formatos de presentación exigidos por la Facultad Politécnica o la carrera</li>
+        </ul>
+  </div>
+</div>
+
+<div id="popup-rechazo" class="popup">
+  <div class="popup-content">
+    <span class="cerrar" onclick="cerrarPopup('rechazo')">&times;</span>
+    <h3 style="color: #111;">Motivos Comunes de Rechazo</h3>
+    <ul>
+      <li>No cumple con el perfil de la carrera.</li>
+      <li>No tiene una justificación profunda (solo dice “voy a hacer)</li>
+      <li>No plantea un problema real de fondo ni lo analiza con datos o contexto.</li>
+      <li>No demuestra innovación, mejora o impacto académico.</li>
+      <li>Se enfoca solo en la ejecución física, pero no en aspectos como gestión, metodología, medición de impacto, optimización, etc.</li>
+      <li>Carece de aplicación de herramientas, software o tecnologías ofimáticas relevantes a la formación.</li>
+      <li>Proyecto copiado o no original.</li>
+    </ul>
+    <p>Aunque tu proyecto cumpla con todos los criterios formales y metodológicos, puede ser considerado “muy sencillo” si no demuestra suficiente profundidad, desafío técnico o aporte académico. </p>
+     <h3 style="color: #111;">¿Qué significa que “el proyecto en sí es muy sencillo”?</h2>
+  <p>
+    Se refiere a que, más allá de que esté bien presentado, el <strong>contenido o idea central del proyecto</strong> 
+    es considerada de <strong>bajo nivel de complejidad</strong> para un trabajo de titulación de licenciatura.
+  </p>
+
+  <h3 style="color: #111;">💡 Ejemplo:</h3>
+  <blockquote style="border-left: 4px solid navy; padding-left: 1em; font-style: italic;color:#111">
+    “Quiero crear un taller móvil donde limpio laptops, instalo programas y doy soporte técnico básico a domicilio.”
+  </blockquote>
+  <p>Esto puede ser real, útil y bien documentado, pero el comité puede pensar:</p>
+  <ul>
+    <li>“Esto se parece más a una práctica técnica que a un proyecto de grado.”</li>
+    <li>“No hay innovación técnica, tecnológica o metodológica.”</li>
+    <li>“No hay desarrollo de algo nuevo (ni software, ni modelo, ni sistema).”</li>
+    <li>“No presenta complejidades de diseño, solución de problemas, evaluación, etc.”</li>
+  </ul>
+
+  <h3 style="color: #111;">📌 ¿Qué esperan como nivel mínimo?</h3>
+  <p>Un proyecto de grado debe implicar al menos una de estas cosas:</p>
+  
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px; color:#111 ">
+    <thead style="background-color: #f0f0f0;">
+      <tr>
+        <th>Criterio esperado</th>
+        <th>¿Por qué lo piden?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Desarrollo de una herramienta/software</td>
+        <td>Demuestra habilidades técnicas avanzadas</td>
+      </tr>
+      <tr>
+        <td>Implementación de un sistema o modelo</td>
+        <td>Aplica conocimientos organizacionales</td>
+      </tr>
+      <tr>
+        <td>Optimización de un proceso existente</td>
+        <td>Mejora sobre algo que ya existe</td>
+      </tr>
+      <tr>
+        <td>Propuesta con impacto social o educativo</td>
+        <td>Alineado con los objetivos de la universidad</td>
+      </tr>
+      <tr>
+        <td>Aplicación de metodologías complejas</td>
+        <td>Ej. SCRUM, ITIL, ISO, encuestas analíticas</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+<div id="popup-recomendacion" class="popup">
+  <div class="popup-content">
+    <span class="cerrar" onclick="cerrarPopup('recomendacion')">&times;</span>
+    <h2 style="color:#111; margin-bottom: 1em;">Recomendaciones para elevar el nivel de dificultad de tu proyecto</h2>
+    <p>Si tu proyecto es considerado sencillo, aquí tienes ideas para enriquecerlo y darle mayor complejidad en distintas áreas:</p>
+    
+    <h3 style="color:#111;">1. Taller móvil / Soporte técnico básico</h3>
+    <ul>
+      <li>Diseña un sistema de gestión de solicitudes y asignación de técnicos en tiempo real.</li>
+      <li>Crea una app móvil o web para clientes que permita abrir tickets y seguimiento.</li>
+      <li>Aplica metodologías ágiles (SCRUM) y documenta el proceso.</li>
+      <li>Realiza análisis estadístico de tiempos de respuesta y satisfacción.</li>
+      <li>Integra diagnóstico remoto o automatización de tareas.</li>
+    </ul>
+    
+    <h3 style="color:#111;">2. Creación y gestión de salas de cómputo</h3>
+    <ul>
+      <li>Desarrolla un sistema automatizado para control de acceso e inventario.</li>
+      <li>Implementa un dashboard con monitoreo en tiempo real y alertas.</li>
+      <li>Aplica normas ISO y políticas de seguridad informática.</li>
+      <li>Genera reportes analíticos para optimizar recursos.</li>
+    </ul>
+
+    <h3 style="color:#111;">3. Sistemas o software</h3>
+    <ul>
+      <li>Define el problema con análisis de requerimientos detallados.</li>
+      <li>Aplica control de versiones, pruebas unitarias e integración.</li>
+      <li>Implementa funcionalidades avanzadas o integraciones con otros sistemas.</li>
+      <li>Utiliza patrones de diseño y arquitectura modular.</li>
+      <li>Documenta código, pruebas y manuales de usuario.</li>
+    </ul>
+
+    <h3 style="color:#111;">4. Aplicaciones móviles o de escritorio</h3>
+    <ul>
+      <li>Desarrolla prototipos UX/UI con pruebas de usuarios.</li>
+      <li>Agrega notificaciones push, sincronización y autenticación segura.</li>
+      <li>Incluye medidas robustas de seguridad y manejo de errores.</li>
+      <li>Realiza pruebas en distintos dispositivos.</li>
+      <li>Integra análisis de datos para mejorar la experiencia.</li>
+    </ul>
+
+    <h3 style="color:#111;">5. Bases de datos</h3>
+    <ul>
+      <li>Diseña bases normalizadas con diagramas ER detallados.</li>
+      <li>Implementa procedimientos almacenados, triggers y optimización.</li>
+      <li>Realiza estudios de seguridad y control de accesos.</li>
+      <li>Integra con aplicaciones y prueba bajo carga.</li>
+      <li>Documenta modelado y pruebas.</li>
+    </ul>
+
+    <h3 style="color:#111;">6. Sitios web</h3>
+    <ul>
+      <li>Implementa CMS personalizado o integración con gestores.</li>
+      <li>Añade comercio electrónico, chat en vivo o área clientes.</li>
+      <li>Optimiza SEO y rendimiento multidispositivo.</li>
+      <li>Integra analítica avanzada y personalización.</li>
+      <li>Aplica técnicas de seguridad y protección contra ataques.</li>
+    </ul>
+
+    <h3 style="color:#111;">7. Servidores y redes</h3>
+    <ul>
+      <li>Configura monitoreo y alertas automáticas.</li>
+      <li>Implementa copias de seguridad y planes de recuperación.</li>
+      <li>Aplica configuraciones avanzadas de seguridad (firewall, VPN).</li>
+      <li>Documenta administración, escalabilidad y balanceo de carga.</li>
+      <li>Implementa alta disponibilidad y redundancia.</li>
+    </ul>
+
+    <p><strong>Recuerda:</strong> el nivel de dificultad depende no solo de la tecnología, sino del análisis profundo, metodología, innovación y evaluación de resultados.</p>
+  </div>
+</div>
+
 <div class="accordion-item">
   <button class="accordion-btn">Trabajo Dirigido</button>
   <div class="accordion-content">
@@ -222,28 +411,74 @@
   </div>
 
   <script>
-    function showtabe(tabeId) {
-      document.querySelectorAll('.tabe').forEach(tabe => tabe.classList.remove('active'));
-      document.querySelectorAll('.tabe-content').forEach(content => content.classList.remove('active'));
-      document.querySelector(`.tabe[onclick*="${tabeId}"]`).classList.add('active');
-      document.getElementById(tabeId).classList.add('active');
-    }
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+  }
+</script>
 
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("collapsed");
-    }
+    <script src="nodes.js"></script>
 
-    // Acordeón
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.accordion-btn').forEach(button => {
-        button.addEventListener('click', () => {
-          button.classList.toggle('active');
-          const content = button.nextElementSibling;
-          content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
+    <script>
+function mostrarPopup(tipo) {
+  const popup = document.getElementById('popup-' + tipo);
+  if (popup) {
+    popup.style.display = 'flex';  // Mostrar con flex para centrar
+  }
+}
+
+function cerrarPopup(tipo) {
+  const popup = document.getElementById('popup-' + tipo);
+  if (popup) {
+    popup.style.display = 'none';
+  }
+}
+
+// Para cerrar al hacer clic fuera del contenido, aplicable a múltiples popups
+document.addEventListener('DOMContentLoaded', () => {
+  // Selecciona todos los popups que tengan la clase 'popup'
+  const popups = document.querySelectorAll('.popup');
+
+  popups.forEach(popup => {
+    popup.addEventListener('click', (e) => {
+      const contenido = popup.querySelector('.popup-content');
+      if (contenido && !contenido.contains(e.target)) {
+        popup.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+<script>
+  function showtabe(tabeId) {
+    // Quitar clase active a todas las pestañas
+    document.querySelectorAll('.tabe').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tabe-content').forEach(c => c.classList.remove('active'));
+
+    // Activar la pestaña clickeada y su contenido
+    document.querySelector(`.tabe[onclick*="${tabeId}"]`).classList.add('active');
+    document.getElementById(tabeId).classList.add('active');
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.accordion-btn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        // Alternar clase en el botón
+        this.classList.toggle('active');
+
+        // Mostrar/ocultar contenido
+        const content = this.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
       });
     });
-  </script>
-    <script src="nodes.js"></script>
+  });
+</script>
+
 </body>
 </html>

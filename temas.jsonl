@@ -1,0 +1,2 @@
+error-wifi|No conecta al wifi|<p>La solución es reiniciar NetworkManager...</p>
+error-usb|USB no aparece|<ul><li>Prueba otro puerto</li><li>Verifica con lsusb</li></ul>

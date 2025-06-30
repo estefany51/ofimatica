@@ -1,0 +1,9 @@
+mañana|Rodrigo Arteaga|07:00 - 12:30
+mañana|Yaquelin Ipi|07:00 - 12:30
+mañana|Pendiente|07:00 - 12:30
+tarde|Natalia Roque|12:00 - 17:30
+tarde|Albert Ramirez|12:00 - 17:30
+tarde|Joel Ardaya|12:00 - 17:30
+noche|Diego Graz|17:00 - 22:00
+noche|Richard Maira|17:00 - 22:00
+noche|Julio Ramos|17:00 - 22:00

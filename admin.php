@@ -30,8 +30,9 @@ $salas = "salas.txt";
 
 $materiaPath = [
   "Temas" => "temas.txt",
-  "Ofimática" => "ofimatica.txt",
+  "Teleinformatica" => "teleinformatica.txt",
   "Sistemas" => "sistemas.txt",
+  "Programacion" => "programacion.txt",
   "Sitios" => "sitios.txt"
 ];
 
@@ -489,8 +490,6 @@ echo "<form method='POST' action='admin.php?tab=archivos' style='display:inline;
     <input type="hidden" name="guardar_salas" value="1">
   </form>
 </div>
-
-
 
 <div id="tab-material" class="tab box" style="display:none;">
   <div style="max-width:900px; margin:30px auto; padding:30px; background:#fff; border:1px solid #ddd; border-radius:10px; font-family:sans-serif;">

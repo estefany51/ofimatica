@@ -44,6 +44,57 @@ file_put_contents($metaFile, $contenidoMeta);
     <title>Malla Curricular</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* 👇 FOOTER 👇 */
+ footer {
+  background-color: rgb(2, 54, 109);
+  color: white;
+  width: 100vw;
+  padding: 2rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.2;
+}
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.footer-col {
+  flex: 1 1 250px;
+  margin-bottom: 1.5rem;
+}
+.footer-col h3, .footer-col h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+.footer-col p, .footer-col a {
+  font-size: 0.85rem;
+  color: white;
+  text-decoration: none;
+  margin: 0.3rem 3rem 0.3rem 0;
+   text-align: justify; /* ✅ Justifica el texto */
+ 
+}
+.footer-col a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  border-top: 1px solid rgb(237, 237, 237);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: white; /* Asegura color en contenedor */
+}
+.footer-bottom p {
+  color: white; /* ✅ Fuerza el blanco en los <p> */
+  margin: 0.2rem 0;
+}
+    </style>
   </head>
   <body>
       <!-- Fondo animado con canvas -->
@@ -131,7 +182,7 @@ echo "<li>
 </div>
 <?php endforeach; ?>
 
-  <form class="mat-upload" action="admin.php" method="POST" enctype="multipart/form-data" style="max-width:500px; margin:auto; background:#f9f9f9; padding:20px; border-radius:10px;">
+<form class="mat-upload" action="upload_material.php" method="POST" enctype="multipart/form-data" style="max-width:500px; margin:auto; background:#f9f9f9; padding:20px; border-radius:10px;">
             <h3 style="margin-bottom:10px;">📤 Subir Material de Apoyo</h3>
 
             <label>Nombre completo:</label>
@@ -160,7 +211,7 @@ echo "<li>
             <label>Archivo (PDF, DOCX, PPTX, ZIP) (opcional):</label>
             <input type="file" name="archivo" accept=".pdf,.docx,.pptx,.zip" style="margin-bottom:15px;">
 
-            <button type="submit" name="subir_material" class="mat-submit-btn" style="padding:10px 20px; background:#007BFF; color:white; border:none; border-radius:5px;">Enviar para revisión</button>
+       <button type="submit" name="subir_material" class="mat-submit-btn" style="padding:10px 20px; background:#007BFF; color:white; border:none; border-radius:5px;">Enviar para revisión</button>
   </form>
 
 
@@ -356,6 +407,31 @@ echo "<li>
 }
 
   </style>
+<script>
+  const form = document.querySelector('.mat-upload');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch('upload_material.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Error al enviar el formulario');
+      return response.text();
+    })
+    .then(data => {
+      alert('✅ Enviado correctamente');
+      form.reset();
+    })
+    .catch(error => {
+      alert('❌ Ocurrió un error, intenta de nuevo');
+      console.error(error);
+    });
+  });
+</script>
 
 <script src="https://cdn.ckeditor.com/ckeditor5/41.0.1/classic/ckeditor.js"></script>
 <script>
@@ -391,6 +467,31 @@ function cerrarPopup() {
 }
 </script>
 
-  
+  <footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>📘 Información de Ofimática</h3>
+<p>Descubre todo lo que puedes hacer desde nuestra plataforma: explora el campo de acción, simula tu inscripción, conoce los beneficios de becas y auxiliaturas, visualiza y comparte material de apoyo, y accede a muchas más herramientas para potenciar tu formación académica y digital.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>📍 Dirección</h4>
+      <p>Av. 2do anillo Esq. Bush Modulo 212</p>
+      
+    </div>
+
+    <div class="footer-col">
+      <h4>📞 Teléfono</h4>
+      <p>+591 77777777</p>
+      <h4>✉️ Correo</h4>
+      <p>correo@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Liceniatura en Ofimática. Todos los derechos reservados.</p>
+    <p>Desarrollado por <strong>Estefany Paz</strong></p>
+  </div>
+</footer>
   </body>
   </html>

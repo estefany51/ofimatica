@@ -1508,3 +1508,59 @@ main {
   background: #fff;
   color: #000;
 }
+
+  /* 👇 FOOTER 👇 */
+ footer {
+  background-color: rgb(2, 54, 109);
+  color: white;
+  width: 100vw;
+  padding: 2rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.2;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px; /* ✅ Espacio entre columnas */
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col h3, .footer-col h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.footer-col p, .footer-col a {
+  font-size: 0.85rem;
+  color: white;
+  text-decoration: none;
+  margin: 0.3rem 3rem 0.3rem 0;
+   text-align: justify; /* ✅ Justifica el texto */
+ 
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgb(237, 237, 237);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: white; /* Asegura color en contenedor */
+}
+
+.footer-bottom p {
+  color: white; /* ✅ Fuerza el blanco en los <p> */
+  margin: 0.2rem 0;
+}
